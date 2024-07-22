@@ -1,14 +1,15 @@
 const express = require('express');
 const path = require('path');
+const process = require('process')
 
-const port = 80;
+const port = process.env.PORT;
 
 const app = express();
 
 app.set ("view engine", "ejs");
 
-app.use(express.static(path.join(__dirname, "../node_modules/bootstrap/dist/")));
-app.use('/brand', express.static(path.join(__dirname, '../assets/brand'))); //cal /brand/<file name>
+app.use(express.static(path.join(__dirname, "node_modules/bootstrap/dist/")));
+app.use('/brand', express.static(path.join(__dirname, 'assets/brand'))); //cal /brand/<file name>
 app.use(express.static(path.join(__dirname, 'css')));
 
 app.get('/', (req, res) => {

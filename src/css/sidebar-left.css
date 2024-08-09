@@ -1,6 +1,6 @@
 .sidebar-left {
     position: fixed;
-    width: 18%;
+    width: 20%;
     height: 100%;
 }
 
@@ -8,6 +8,7 @@
     width: 100%;
     height: 92vh;
     overflow-y: auto;
+    font-size: 14px;
 
     .sidebar-left-header {
         position: sticky;
@@ -53,9 +54,15 @@
             align-items: center;
             width: 100%;
 
-            p img {
-                height: 16px;
-                padding-right: 10px;
+            p {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                img {
+                    height: 16px;
+                    padding-right: 10px;
+                }
             }
             
             .icon-expand {

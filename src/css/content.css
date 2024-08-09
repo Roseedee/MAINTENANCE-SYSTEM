@@ -1,21 +1,70 @@
 .my-content {
     z-index: -1;
     position: relative;
-    left: 18%;
-    width: 82%;
+    left: 20%;
+    width: 80%;
     min-height: 92vh;
+    padding-left: 10px;
+}
+
+.my-container {
+    margin-top: 10px;
+    border-radius: 10px 0px 0px 10px;
+    width: 100%;
+    min-height: 500px;
 }
 
 .chart-container {
+    padding-bottom: 20px;
+    h4 {
+        padding: 10px 0px 0px 15px; 
+    }
+}
+
+.chart-content {
     width: 100%;
-    height: 500px;
-    border-radius: 8px;
     display: flex;
     flex-direction: row;
 
     .my-chart {
         width: 50%;
+        h6 {
+            padding-left: 20px;
+        }
+        .chart {
+            padding: 10px 20px 20px 20px;
+            width: 100%;
+        }
     }
+}
+
+.status-repair {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+
+    div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+
+        .dot-status {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 10px;
+            border-radius: 10px;
+            margin-right: 10px;
+
+        }
+    }
+
 }
 
 

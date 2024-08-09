@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+  <script src="/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" type="text/css" href="/css/style.css" />
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -36,28 +37,27 @@
         <div class="p-3 sidebar-left-header">
           <h4 class="m-0">ระบบงานซ่อม</h4>
         </div>
-        <div class="left-menu-item-expand" href="">
-          <a class="left-menu-expand-header">
-            <p class="m-0">
-              <img src="/icons/left-menu/dashboard.png"/>
-              คลังงานซ่อม
-            </p>
-            <img class="icon-expand" src="/icons/left-menu/arrow.png" alt="">
-          </a>
-          <div class="sub-left-menu-expand-container expand">
-            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>งานซ่อมทั้งหมด</a>
-            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>กำลังดำเนินการ</a>
-            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>เสร็จแล้ว</a>
-            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>ยกเลิกซ่อม</a>
-            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>อื่นๆ</a>
-          </div>
-        </div>
+        <a class="left-menu-item" href=""><img src="/icons/left-menu/dashboard.png"/>แดชบอร์ด</p></a>
         <a class="left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>เพิ่มงานซ่อมด่วน</p></a>
         <a class="left-menu-item" href=""><img src="/icons/left-menu/add.png"/>เพิ่มงานซ่อมทิ้งไว้</p></a>
         <div class="left-menu-item-expand" href="">
           <div class="left-menu-expand-header">
             <p class="m-0">
-              <img src="/icons/left-menu/dashboard.png"/>
+              <img src="/icons/left-menu/brand.png"/>
+              จัดการยี่ห้อและสถานะงานซ่อม
+            </p>
+            <img class="icon-expand" src="/icons/left-menu/arrow.png" alt="">
+          </div>
+          <div class="sub-left-menu-expand-container">
+            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/brand.png"/>จัดการยี่ห้อ</a>
+            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/model.png"/>จัดการรุ่น</a>
+            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/status.png"/>จัดการสถานะ</a>
+          </div>
+        </div>
+        <div class="left-menu-item-expand" href="">
+          <div class="left-menu-expand-header">
+            <p class="m-0">
+              <img src="/icons/left-menu/treasury.png"/>
               คลังงานซ่อม
             </p>
             <img class="icon-expand" src="/icons/left-menu/arrow.png" alt="">
@@ -73,36 +73,62 @@
       </nav>
     </div>
     <div class="my-content">
-      <div class="chart-container">
-        <div class="my-chart my-background">
-          <canvas id="myChart" style="width:100%;height: 100%;"></canvas>
+      <div class="my-container chart-container my-background">
+        <div class="chart-header">
+          <h4 class="">แดชบอร์ดสรุปงานซ่อม</h4>
+          <hr>
         </div>
-        <div class="my-chart my-background">
-          <canvas id="myChart1" style="width:100%;height: 100%;"></canvas>
+        <div class="chart-content">
+          <div class="my-chart">
+            <h6>สรุปงานซ่อมรายวัน</h6>
+            <div class="chart">
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+          <div class="my-chart">
+            <h6>สรุปงานซ่อมรายเดือน</h6>
+            <div class="chart">
+              <canvas id="myChart1"></canvas>
+            </div>
+          </div>
         </div>
+        <div class="status-repair">
+          <div class="col-lg-3 col-xs-6 text-center">
+            <span class="dot-status" style="background-color: red;"></span> งานซ่อมทั้งหมด
+          </div>
+          <div class="col-lg-3 col-xs-6 text-center">
+            <span class="dot-status" style="background-color: blue;"></span> งานซ่อมทั้งหมด
+          </div>
+          <div class="col-lg-3 col-xs-6 text-center">
+            <span class="dot-status" style="background-color: green;"></span> งานซ่อมทั้งหมด
+          </div>
+        </div>
+      </div>
+      <div class="my-container my-background">
+        a;sldjkfalkjds
       </div>
     </div>
   </div>
   
-  <script src="/js/bootstrap.bundle.min.js"></script>
+  
   <script src="/js/left-menu-expand.js"></script>
   <script>
-    const xValues = [1 + " จันทร์", 2, 3, 4,5,6,7];
+    const xValues = [1,2,3, 4,5,6,7];
 
     new Chart("myChart", {
       type: "line",
       data: {
         labels: xValues,
         datasets: [{
-          data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+          data: [1,2,3,5,4,7,3],
           borderColor: "red",
           fill: false
         },{
-          data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+          data: [2,1,4,5,7,3,3],
           borderColor: "green",
           fill: false
         },{
-          data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+          data: [3,2,1,5,4,3,7],
           borderColor: "blue",
           fill: false
         }]
@@ -111,24 +137,21 @@
         legend: {display: false}
       }
     });
-    const xValues1 = [1, 2, 3, 4,5,6,7,8,9,10,11,12];
+    const xValues1 = [1, 2, 3, 4,5,6,7,8,9,10];
 
     new Chart("myChart1", {
-      type: "line",
+      type: "bar",
       data: {
         labels: xValues1,
         datasets: [{
           data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
-          borderColor: "red",
-          fill: false
+          backgroundColor: 'green',
         },{
           data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
-          borderColor: "green",
-          fill: false
+          backgroundColor: 'blue',
         },{
           data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
-          borderColor: "blue",
-          fill: false
+          backgroundColor: 'red',
         }]
       },
       options: {

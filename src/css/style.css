@@ -2,10 +2,12 @@
 @import url(sidebar-left.css);
 @import url(content.css);
 
+/* #2196F3 */
 * {
     font-family: "kanit", sans-serif;
     padding: 0px;
     margin: 0px;
+    font-size: 1rem;
 }
 
 body {
@@ -17,7 +19,6 @@ body {
 .my-background {
     background-color: white;
     box-shadow: 3px 3px 2px #0000000d;
-    /* border: 1px solid black; */
 }
 
 header {

@@ -1,0 +1,101 @@
+.sidebar-left {
+    position: relative;
+    width: 20%;
+    height: 100%;
+}
+
+.left-menu-container {
+    position: fixed;
+    min-width: 250px;
+    max-width: 400px;
+    height: 92vh;
+    overflow-y: auto;
+
+    .sidebar-left-header {
+        position: sticky;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: #320e47;
+    }
+    
+    .left-menu-item {
+        text-decoration: none;
+        color: black;
+        display: flex;
+        align-items: center;
+        padding: 10px 10px;
+
+        img {
+            height: 16px;
+            padding-right: 10px;
+        }
+
+        &:hover {
+            background-color: #f1f1f1;
+        }
+    }
+
+    .left-menu-item-expand {
+        display: block;
+        width: 100%;
+        
+        .left-menu-expand-header {
+            cursor: pointer;
+            text-decoration: none;
+            padding: 10px;
+            color: black;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            p img {
+                height: 16px;
+                padding-right: 10px;
+            }
+            
+            .icon-expand {
+                height: 12px;
+                transition: transform 0.3s ease;
+            }
+            
+            .rotate {
+              transform: rotate(180deg);
+            }
+            &:hover {
+                background-color: #f1f1f1;
+            }
+        }
+
+        .sub-left-menu-expand-container {
+            display: none;
+            width: 100%;
+            padding: 0px 20px;
+
+            .sub-left-menu-item {
+                text-decoration: none;
+                color: black;
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                border-radius: 5px;
+
+                img {
+                    height: 16px;
+                    padding-right: 10px;
+                }
+
+                &:hover {
+                    background-color: #f1f1f1;
+                }
+            }
+        }
+
+    }
+}

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url(sidebar-left.css);
 
 * {
     font-family: "kanit", sans-serif;
@@ -43,46 +43,4 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-}
-
-
-.sidebar-left {
-    position: relative;
-    width: 20%;
-    height: 100%;
-    
-    .left-menu-container {
-        position: fixed;
-        width: 20%;
-        height: 92vh;
-        overflow-y: auto;
-
-        .sidebar-left-header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .left-menu-item {
-            text-decoration: none;
-            color: black;
-            display: block;
-            padding: 10px 10px;
-
-            img {
-                height: 16px;
-                padding-right: 10px;
-            }
-
-            &:hover {
-                background-color: #f1f1f1;
-            }
-        }
-    }
-}
-
-.my-content {
-    padding: 10px;
-    width: 80%;
-    min-height: 92vh;
 }

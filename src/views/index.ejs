@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
   <header class="p-2 my-header my-background">
@@ -32,12 +33,40 @@
         <div class="p-3 sidebar-left-header">
           <h4 class="m-0">ระบบงานซ่อม</h4>
         </div>
-        <a class="left-menu-item" href=""><img src="/icons/dashboard.png"/>แดชบอร์ดของงานซ่อม</a>
-        <a class="left-menu-item" href=""><img src="/icons/dashboard.png"/>ค้นหาและจัดการงานซ่อม</a>
-        <a class="left-menu-item" href=""><img src="/icons/dashboard.png"/>เพิ่มงานซ่อมด่วน</a>
-        <a class="left-menu-item" href=""><img src="/icons/dashboard.png"/>เพิ่มงานซ่อมทิ้งไว้</a>
-        <a class="left-menu-item" href=""><img src="/icons/dashboard.png"/>จัดการยี่ห้อและสถานะ</a>
-        <a class="left-menu-item" href=""><img src="/icons/dashboard.png"/>คลังข้อมูลงานซ่อม</a>
+        <div class="left-menu-item-expand" href="">
+          <a class="left-menu-expand-header">
+            <p class="m-0">
+              <img src="/icons/left-menu/dashboard.png"/>
+              คลังงานซ่อม
+            </p>
+            <img class="icon-expand" src="/icons/left-menu/arrow.png" alt="">
+          </a>
+          <div class="sub-left-menu-expand-container">
+            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>งานซ่อมทั้งหมด</a>
+            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>กำลังดำเนินการ</a>
+            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>เสร็จแล้ว</a>
+            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>ยกเลิกซ่อม</a>
+            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>อื่นๆ</a>
+          </div>
+        </div>
+        <a class="left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>เพิ่มงานซ่อมด่วน</p></a>
+        <a class="left-menu-item" href=""><img src="/icons/left-menu/add.png"/>เพิ่มงานซ่อมทิ้งไว้</p></a>
+        <div class="left-menu-item-expand" href="">
+          <div class="left-menu-expand-header">
+            <p class="m-0">
+              <img src="/icons/left-menu/dashboard.png"/>
+              คลังงานซ่อม
+            </p>
+            <img class="icon-expand" src="/icons/left-menu/arrow.png" alt="">
+          </div>
+          <div class="sub-left-menu-expand-container">
+            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>งานซ่อมทั้งหมด</a>
+            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>กำลังดำเนินการ</a>
+            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>เสร็จแล้ว</a>
+            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>ยกเลิกซ่อม</a>
+            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>อื่นๆ</a>
+          </div>
+        </div>
       </nav>
     </div>
     <div class="my-content">
@@ -46,5 +75,16 @@
   </div>
   
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.left-menu-item-expand').click(function(e) {
+        e.preventDefault();
+        $(this).find('.left-menu-expand-header').toggleClass('expanded');
+        $(this).find('.sub-left-menu-expand-container').slideToggle('fast');
+        $(this).find('.icon-expand').toggleClass('rotate');
+      });
+    });
+  </script>>
+
 </body>
 </html>

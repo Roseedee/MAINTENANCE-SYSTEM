@@ -1,5 +1,21 @@
 .my-content {
-    padding: 10px;
-    width: 80%;
+    z-index: -1;
+    position: relative;
+    left: 18%;
+    width: 82%;
     min-height: 92vh;
 }
+
+.chart-container {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+
+    .my-chart {
+        width: 50%;
+    }
+}
+
+

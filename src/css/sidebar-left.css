@@ -1,13 +1,11 @@
 .sidebar-left {
-    position: relative;
-    width: 20%;
+    position: fixed;
+    width: 18%;
     height: 100%;
 }
 
 .left-menu-container {
-    position: fixed;
-    min-width: 250px;
-    max-width: 400px;
+    width: 100%;
     height: 92vh;
     overflow-y: auto;
 
@@ -95,6 +93,10 @@
                     background-color: #f1f1f1;
                 }
             }
+        }
+
+        .expand {
+            display: block;
         }
 
     }

@@ -10,7 +10,9 @@ app.set ("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "../node_modules/bootstrap/dist/")));
 app.use('/brand', express.static(path.join(__dirname, '../assets/brand'))); //cal /brand/<file name>
 app.use('/icons', express.static(path.join(__dirname, '../assets/icons'))); //cal /brand/<file name>
-app.use(express.static(path.join(__dirname, 'css')));
+app.use('/css', express.static(path.join(__dirname, 'css')));
+app.use('/js', express.static(path.join(__dirname, 'js')));
+
 
 app.get('/', (req, res) => {
     res.render(path.join(__dirname, 'views'));

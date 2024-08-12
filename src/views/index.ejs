@@ -13,122 +13,110 @@
 
 </head>
 <body>
-  <header class="p-2 my-header my-background">
-    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none">
-      <img src="/brand/logo-sm.png" alt="">
-    </a>
+  <%- include('./components/header.ejs') %>
 
-    <div class="dropdown text-end">
-        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-          <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
-        </a>
-        <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-          <li><a class="dropdown-item" href="#">โปรไฟล์</a></li>
-          <li><a class="dropdown-item" href="#">ตั้งค่า</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#">ออกจากระบบ</a></li>
-        </ul>
-    </div>
-  </header>
-
-  <div class="my-body">
-    <div class="sidebar-left">
-      <nav class="left-menu-container  my-background p-0">
-        <div class="p-3 sidebar-left-header">
-          <h4 class="m-0">ระบบงานซ่อม</h4>
-        </div>
-        <a class="left-menu-item" href=""><img src="/icons/left-menu/dashboard.png"/>แดชบอร์ด</p></a>
-        <a class="left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>เพิ่มงานซ่อมด่วน</p></a>
-        <a class="left-menu-item" href=""><img src="/icons/left-menu/add.png"/>เพิ่มงานซ่อมทิ้งไว้</p></a>
-        <div class="left-menu-item-expand" href="">
-          <div class="left-menu-expand-header">
-            <p class="m-0">
-              <img src="/icons/left-menu/brand.png"/>
-              จัดการยี่ห้อและสถานะงานซ่อม
-            </p>
-            <img class="icon-expand" src="/icons/left-menu/arrow.png" alt="">
+  <div class="main">
+    <%- include('./components/left-sidebar.ejs') %>
+    <div class="body">
+      <div class="article">
+        <div class="content">
+          <div class="content-header">
+            <h5>แดชบอร์ด</h5>
+            <hr>
           </div>
-          <div class="sub-left-menu-expand-container">
-            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/brand.png"/>จัดการยี่ห้อ</a>
-            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/model.png"/>จัดการรุ่น</a>
-            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/status.png"/>จัดการสถานะ</a>
-          </div>
-        </div>
-        <div class="left-menu-item-expand" href="">
-          <div class="left-menu-expand-header">
-            <p class="m-0">
-              <img src="/icons/left-menu/treasury.png"/>
-              คลังงานซ่อม
-            </p>
-            <img class="icon-expand" src="/icons/left-menu/arrow.png" alt="">
-          </div>
-          <div class="sub-left-menu-expand-container">
-            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>งานซ่อมทั้งหมด</a>
-            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>กำลังดำเนินการ</a>
-            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>เสร็จแล้ว</a>
-            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>ยกเลิกซ่อม</a>
-            <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/quick-add.png"/>อื่นๆ</a>
-          </div>
-        </div>
-      </nav>
-    </div>
-    <div class="my-content">
-      <div class="my-container chart-container my-background">
-        <div class="chart-header">
-          <h4 class="">แดชบอร์ดสรุปงานซ่อม</h4>
-          <hr>
-        </div>
-        <div class="chart-content">
-          <div class="my-chart">
-            <h6>สรุปงานซ่อมรายวัน</h6>
-            <div class="chart">
-              <canvas id="myChart"></canvas>
+          <div class="chart-container p-2">
+            <div class="my-chart">
+              <h6>สรุปงานซ่อมรายวัน</h6>
+              <div class="chart">
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+            <div class="my-chart">
+              <h6>สรุปงานซ่อมรายเดือน</h6>
+              <div class="chart">
+                <canvas id="myChart1"></canvas>
+              </div>
             </div>
           </div>
-          <div class="my-chart">
-            <h6>สรุปงานซ่อมรายเดือน</h6>
-            <div class="chart">
-              <canvas id="myChart1"></canvas>
+          <div class="status-repair">
+            <div class="col-lg-3 col-xs-6 text-center">
+              <span class="dot-status" style="background-color: red;"></span> งานซ่อมทั้งหมด
+            </div>
+            <div class="col-lg-3 col-xs-6 text-center">
+              <span class="dot-status" style="background-color: blue;"></span> งานซ่อมทั้งหมด
+            </div>
+            <div class="col-lg-3 col-xs-6 text-center">
+              <span class="dot-status" style="background-color: green;"></span> งานซ่อมทั้งหมด
             </div>
           </div>
         </div>
-        <div class="status-repair">
-          <div class="col-lg-3 col-xs-6 text-center">
-            <span class="dot-status" style="background-color: red;"></span> งานซ่อมทั้งหมด
+        <div class="content">
+          <div class="content-header">
+            <h5>ประวัติการทำงาน</h5>
+            <hr>
           </div>
-          <div class="col-lg-3 col-xs-6 text-center">
-            <span class="dot-status" style="background-color: blue;"></span> งานซ่อมทั้งหมด
-          </div>
-          <div class="col-lg-3 col-xs-6 text-center">
-            <span class="dot-status" style="background-color: green;"></span> งานซ่อมทั้งหมด
+          <div class="table-container">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First</th>
+                  <th>Last</th>
+                  <th>Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <td>Larry the Bird</td>
+                  <td>Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
-      <div class="my-container my-background">
-        a;sldjkfalkjds
-      </div>
+      <%- include('./components/footer.ejs') %>
     </div>
   </div>
   
   
   <script src="/js/left-menu-expand.js"></script>
   <script>
-    const xValues = [1,2,3, 4,5,6,7];
+
+    function ran() {
+      return Math.floor(Math.random() * 10);
+    }
+
+    const xValues = [1,2,3,4,5,6,7];
 
     new Chart("myChart", {
       type: "line",
       data: {
         labels: xValues,
         datasets: [{
-          data: [1,2,3,5,4,7,3],
+          data: [ran(),ran(),ran(),ran(),ran(),ran(),ran()],
           borderColor: "red",
           fill: false
         },{
-          data: [2,1,4,5,7,3,3],
+          data: [ran(),ran(),ran(),ran(),ran(),ran(),ran()],
           borderColor: "green",
           fill: false
         },{
-          data: [3,2,1,5,4,3,7],
+          data: [ran(),ran(),ran(),ran(),ran(),ran(),ran()],
           borderColor: "blue",
           fill: false
         }]
@@ -144,13 +132,13 @@
       data: {
         labels: xValues1,
         datasets: [{
-          data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+          data: [ran(),ran(),ran(),ran(),ran(),ran(),ran(),ran(),ran(),ran()],
           backgroundColor: 'green',
         },{
-          data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+          data: [ran(),ran(),ran(),ran(),ran(),ran(),ran(),ran(),ran(),ran()],
           backgroundColor: 'blue',
         },{
-          data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+          data: [ran(),ran(),ran(),ran(),ran(),ran(),ran(),ran(),ran(),ran()],
           backgroundColor: 'red',
         }]
       },

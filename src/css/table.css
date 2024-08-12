@@ -1,0 +1,15 @@
+.table-container {
+    width: 100%;
+    padding: 0px 20px;
+}
+
+table.table {
+  border: none;
+}
+
+table.table tbody th, table.table tbody td {
+  border: none;
+  background-color: aquamarine;
+}
+
+  

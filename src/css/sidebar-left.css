@@ -108,3 +108,7 @@
 
     }
 }
+
+.left-menu-item-active {
+    background-color: aliceblue;
+}

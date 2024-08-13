@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+  <script src="/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+</head>
+<body>
+  <%- include('./components/header.ejs') %>
+
+  <div class="main">
+    <%- include('./components/left-sidebar.ejs') %>
+    <div class="body">
+      <div class="article">
+        <div class="content">
+          
+        </div>
+      </div>
+      <%- include('./components/footer.ejs') %>
+    </div>
+  </div>
+  
+  
+  <script src="/js/left-menu-expand.js"></script>
+  <script>
+
+    function ran() {
+      return Math.floor(Math.random() * 10);
+    }
+
+    const xValues = [1,2,3,4,5,6,7];
+
+    new Chart("myChart", {
+      type: "line",
+      data: {
+        labels: xValues,
+        datasets: [{
+          data: [ran(),ran(),ran(),ran(),ran(),ran(),ran()],
+          borderColor: "red",
+          fill: false
+        },{
+          data: [ran(),ran(),ran(),ran(),ran(),ran(),ran()],
+          borderColor: "green",
+          fill: false
+        },{
+          data: [ran(),ran(),ran(),ran(),ran(),ran(),ran()],
+          borderColor: "blue",
+          fill: false
+        }]
+      },
+      options: {
+        legend: {display: false}
+      }
+    });
+    const xValues1 = [1, 2, 3, 4,5,6,7,8,9,10];
+
+    new Chart("myChart1", {
+      type: "bar",
+      data: {
+        labels: xValues1,
+        datasets: [{
+          data: [ran(),ran(),ran(),ran(),ran(),ran(),ran(),ran(),ran(),ran()],
+          backgroundColor: 'green',
+        },{
+          data: [ran(),ran(),ran(),ran(),ran(),ran(),ran(),ran(),ran(),ran()],
+          backgroundColor: 'blue',
+        },{
+          data: [ran(),ran(),ran(),ran(),ran(),ran(),ran(),ran(),ran(),ran()],
+          backgroundColor: 'red',
+        }]
+      },
+      options: {
+        legend: {display: false}
+      }
+    });
+  </script>
+
+</body>
+</html>

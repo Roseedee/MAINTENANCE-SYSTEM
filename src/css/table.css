@@ -1,3 +1,10 @@
+:root {
+  --table-font-size: 0.8rem;
+  
+  /* color */
+  --row-data-table-color: #f4f4f4;
+}
+
 .table-container {
     width: 100%;
     padding: 0px 20px;
@@ -5,11 +12,27 @@
 
 table.table {
   border: none;
+  border-collapse: separate;
+  border-spacing: 0px 5px;
 }
 
-table.table tbody th, table.table tbody td {
+table.table th, table.table td {
   border: none;
-  background-color: aquamarine;
 }
 
+table.table tbody {
+
+  th, td {
+    background-color: var(--row-data-table-color);
+    font-size: var(--table-font-size);
+  }
+
+  td.start {
+    border-radius: 5px 0px 0px 5px;
+  }
+  
+  td.end{
+    border-radius: 0px 5px 5px 0px;
+  }
+}
   

@@ -1,23 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(res.css);
 @import url(header.css);
 @import url(sidebar-left.css);
 @import url(content.css);
-@import url(table.css);
 @import url(footer.css);
 
-
-/* #2196F3 */
 * {
     font-family: "kanit", sans-serif;
-    padding: 0px;
-    margin: 0px;
     font-size: 1rem;
 }
 
 body {
-    background-color: #d9f5f9;
+    background-color: var(--main-background);
     min-height: 100vh;
-    
 }
 
 .my-background {
@@ -27,7 +21,7 @@ body {
 
 .main {
     position: absolute;
-    top: 8vh;
+    top: var(--header-h);
     left: 0px;
     width: 100%;
     min-height: 92vh;
@@ -37,5 +31,5 @@ body {
 }
 
 hr {
-    color: rgb(161, 161, 161);
+    color: #a1a1a1;
 }

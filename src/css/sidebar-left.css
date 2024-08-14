@@ -110,6 +110,17 @@
     }
 }
 
-.left-menu-item-active {
+div.sidebar-left nav.left-menu-container a.active {
     background-color: aliceblue;
+}
+
+div.sidebar-left nav.left-menu-container div.left-menu-item-expand.active {
+    
+    .sub-left-menu-expand-container {
+        display: block;
+
+        a.active {
+            background-color: #ff7070;
+        }
+    }
 }

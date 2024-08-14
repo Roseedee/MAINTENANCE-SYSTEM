@@ -16,4 +16,16 @@ route.get('/search', (req, res) => {
     });
 })
 
+route.get('/quick-add-task', (req, res) => {
+    res.render(path.join(view_path, 'quick-add-task'), {
+        page: 'quick-add-task'
+    })
+})
+
+route.get('/add-task', (req, res) => {
+    res.render(path.join(view_path, 'add-task'), {
+        page: 'add-task'
+    })
+})
+
 module.exports = route;

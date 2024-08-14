@@ -1,6 +1,7 @@
 .sidebar-left {
+    display: var(--sidebar-status);
     position: fixed;
-    width: 20%;
+    width: var(--sidebar-left-w);
     height: 100%;
 }
 

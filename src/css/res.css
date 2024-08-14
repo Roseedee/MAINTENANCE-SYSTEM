@@ -1,0 +1,17 @@
+:root {
+    /* header */
+    --header-h: 8vh;
+    --header-w: 100%;
+
+    /* sidebar left */
+    --sidebar-status: block;
+    --sidebar-left-w: 350px;
+
+
+}
+
+@media screen and (max-width: 500px) {
+    :root {
+          --sidebar-status: none;
+    }
+}

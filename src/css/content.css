@@ -20,6 +20,7 @@
     border-radius: 10px 0px 0px 10px;
     width: 100%;
     min-height: 80px;
+    min-width: 500px;
     background-color: white;
     box-shadow: 3px 3px 2px #0000000d;
     padding-bottom: 5px;

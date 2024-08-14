@@ -1,6 +1,6 @@
 header {
-    width: 100%;
-    height: 8vh;
+    width: var(--header-w);
+    height: var(--header-h);
     position: fixed;
     z-index: 1;
     display: flex;

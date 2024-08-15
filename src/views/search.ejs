@@ -8,6 +8,7 @@
   <script src="/js/bootstrap.bundle.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/pages/search.css" />
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
@@ -25,6 +26,24 @@
             <h5>ค้นหาและจัดการงานซ่อม</h5>
             <hr>
           </div>
+          <form action="" class="search-form-container">
+            <div class="my-input-container">
+              <label for="select-type">เลือกประเภท</label>
+              <select class="form-select form-select-lg" id="input1">
+                <option value="1" selected>เลขอินวอยด์</option>
+                <option value="2">ชื่อลูกค้า</option>
+                <option value="3">เบอร์โทร</option>
+                <option value="4">หมายเลขเครื่อง</option>
+              </select>
+            </div>
+            <div class="my-input-container">
+              <label for="input-search">ช่องค้นหาเพื่อจัดการ</label>
+              <div class="my-input-group">
+                <input type="text" class="form-control" placeholder="ค้นหา">
+                <button type="submit" class="btn btn-lg btn-primary">ค้นหา</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
       <%- include('./components/footer.ejs') %>

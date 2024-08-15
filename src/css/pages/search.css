@@ -1,0 +1,22 @@
+.search-form-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 20px;
+    gap: 15px;
+
+    .my-input-container:nth-child(1) {
+        flex-grow: 2;
+    }
+
+    .my-input-container:nth-child(2) {
+        flex-grow: 10;
+        .my-input-group {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 10px;
+        }
+    }
+}
+

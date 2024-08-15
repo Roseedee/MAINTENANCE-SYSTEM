@@ -1,3 +1,7 @@
+:root {
+    --left-menu-header-color: #320e47;
+}
+
 .sidebar-left {
     display: var(--sidebar-status);
     position: fixed;
@@ -19,15 +23,29 @@
         justify-content: center;
         align-items: center;
         color: white;
-        background-color: #320e47;
+        background-color: var(--left-menu-header-color);
     }
     
     .left-menu-item {
         text-decoration: none;
         color: black;
         display: flex;
+        flex-direction: row;
         align-items: center;
+        justify-content: space-between;
         padding: 10px 10px;
+
+        p {
+            margin: 0px;
+        }
+
+        p:nth-child(2) {
+            padding: 2px 5px;
+            border-radius: 5px;
+            background-color: var(--left-menu-header-color);
+            color: white;
+            font-size: 10px;
+        }
 
         img {
             height: 16px;

@@ -22,9 +22,23 @@ table.table th, table.table td {
 
 table.table tbody {
 
+  th.fit, td.fit {
+    width: 1px;
+    min-width: fit-content;
+    white-space: nowrap;
+    padding: 10px 20px;
+  }
+  
+
   th, td {
     background-color: var(--row-data-table-color);
     font-size: var(--table-font-size);
+    vertical-align:middle;
+    
+    span {
+      font-size: var(--table-font-size);
+
+    }
   }
 
   td.start {

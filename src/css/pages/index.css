@@ -1,0 +1,49 @@
+.chart-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.my-chart {
+    width: 50%;
+    min-width: 500px;
+    h6 {
+        padding-left: 20px;
+    }
+    .chart {
+        display: flex;
+        justify-content: center;
+        padding: 10px 20px 20px 20px;
+        width: 100%;
+    }
+}
+
+.status-repair {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 10px;
+
+    div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+
+        .dot-status {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 10px;
+            border-radius: 10px;
+            margin-right: 10px;
+
+        }
+    }
+
+}

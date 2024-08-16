@@ -3,6 +3,7 @@
 @import url(sidebar-left.css);
 @import url(content.css);
 @import url(footer.css);
+@import url(components/input.css);
 
 * {
     font-family: "kanit", sans-serif;

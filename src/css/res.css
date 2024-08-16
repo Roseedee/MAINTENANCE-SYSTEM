@@ -3,6 +3,8 @@
 :root {
     /* main */
     --main-background: #d9f5f9;
+    --active-color: #320e47;
+    --active-hover-color: #673b80;
 
     /* header */
     --header-h: 8vh;

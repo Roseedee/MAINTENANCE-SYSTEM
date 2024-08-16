@@ -1,0 +1,14 @@
+$(document).ready(function(){
+    $(".input-brand-task").focus(function(){
+      $("div.selector-brand-task").fadeIn();
+    });
+    $(".input-brand-task").blur(function(){
+      $("div.selector-brand-task").fadeOut();
+    });
+    $(".input-model-task").focus(function(){
+      $("div.selector-model-task").fadeIn();
+    });
+    $(".input-model-task").blur(function(){
+      $("div.selector-model-task").fadeOut();
+    });
+});

@@ -8,6 +8,7 @@
   <script src="/js/bootstrap.bundle.min.js"></script>
   
   <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/pages/quick-add-task.css" />
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
@@ -25,9 +26,117 @@
             <h5>เพิ่มงานซ่อมด่วนแบบจบหน้าร้าน</h5>
             <hr>
           </div>
-          <div class="my-group-container">
-            <input type="text" class="my-input my-input-sm">
-          </div>
+          <form action="" class="my-form">
+            <span class="details"><span style="color: red; font-weight: bold;">หมายเหตุ!</span> ซ่อมด่วนคืองานซ่อมที่จบหน้าร้านเช่น เปลี่ยนแบต เปลี่ยนจอรอรับได้เลยหรือจบภายในวันนั่น งานซ่อมนี้จะถูกปรับเป็น <span style="color: blueviolet;">"รับเครื่องแล้ว"</span> ทันที</span>
+            <hr>
+            <div class="my-input-group-container">
+              <div class="my-input-container">
+                <label for="">ชื่อลูกค้า</label>
+                <input type="text" class="my-input my-input-sm" placeholder="นายสมมุติ นามสกุลตัวอย่าง">
+              </div>
+              <div class="my-input-container">
+                <label for="">เบอร์โทร</label>
+                <input type="text" class="my-input my-input-sm" placeholder="0800000000">
+              </div>
+            </div>
+            <hr>
+            <div class="my-input-group-container">
+              <div class="my-input-container">
+                <label for="">ยี่ห้องานซ่อม <span style="color: green;">#เพิ่มยี่ห้ออัตโนมัติที่ไม่มี</span></label>
+                <input type="text" class="my-input my-input-sm input-brand-task" placeholder="เลือกรุ่น">
+                <div class="selector-container">
+                  <div class="popup-selector-list selector-brand-task" id="test">
+                    <a href="/quick-add-task" class="popup-selector-item">Samsung</a>
+                    <a href="/quick-add-task" class="popup-selector-item">Lenovo</a>
+                    <a href="/quick-add-task" class="popup-selector-item">Acer</a>
+                    <a href="/quick-add-task" class="popup-selector-item">Asus</a>
+                    <a href="/quick-add-task" class="popup-selector-item">HP</a>
+                    <a href="/quick-add-task" class="popup-selector-item">Canon</a>
+                    <a href="/quick-add-task" class="popup-selector-item">Brother</a>
+                    <a href="/quick-add-task" class="popup-selector-item">MSI</a>
+                  </div>
+                </div>
+              </div>
+              <div class="my-input-container">
+                <label for="">รุ่นงานซ่อม <span style="color: green;">#เพิ่มรุ่นอัตโนมัติที่ไม่มี</span></label>
+                <input type="text" class="my-input my-input-sm input-model-task" placeholder="เลือกรุ่น">
+                <div class="selector-container">
+                  <div class="popup-selector-list selector-model-task" id="test">
+                    <a href="/quick-add-task" class="popup-selector-item">Samsung</a>
+                    <a href="/quick-add-task" class="popup-selector-item">Lenovo</a>
+                    <a href="/quick-add-task" class="popup-selector-item">Acer</a>
+                    <a href="/quick-add-task" class="popup-selector-item">Asus</a>
+                    <a href="/quick-add-task" class="popup-selector-item">HP</a>
+                    <a href="/quick-add-task" class="popup-selector-item">Canon</a>
+                    <a href="/quick-add-task" class="popup-selector-item">Brother</a>
+                    <a href="/quick-add-task" class="popup-selector-item">MSI</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="my-input-group-container">
+              <div class="my-input-container">
+                <label for="">อาการที่ลูกค้าแจ้ง</label>
+                <textarea class="my-input my-input-sm" name="" id="" rows="5" placeholder="ภาพไม่มา"></textarea>
+              </div>
+              <div class="my-input-container">
+                <label for="">อาการที่ลูกค้าแจ้ง</label>
+                <textarea class="my-input my-input-sm" name="" id="" rows="5" placeholder="เปลี่ยนจอใหม่"></textarea>
+              </div>
+            </div>
+            <div class="my-input-group-container">
+              <div class="my-input-container">
+                <label for="">หมายเลขเครื่อง</label>
+                <input type="text" class="my-input my-input-sm" placeholder="หมายเลขเครื่อง">
+              </div>
+              <div class="my-input-container">
+                <label for="">หมายเลข SN</label>
+                <input type="text" class="my-input my-input-sm" placeholder="หมายเลข Serialnumber">
+              </div>
+            </div>
+            <hr>
+            <div class="my-input-group-container">
+              <div class="my-input-container">
+                <label for="">ต้นทุน <span style="color: green;">#ต้นทุนในการซ่อมรวมอะไหล่</span></label>
+                <input type="number" class="my-input my-input-sm" placeholder="ต้นทุน" value="0">
+              </div>
+              <div class="my-input-container">
+                <label for="">ค่าบริการ <span style="color: green;">#จำนวนเงินที่รับจากลูกค้า</span></label>
+                <input type="number" class="my-input my-input-sm" placeholder="ค่าบริการ" value="0">
+              </div>
+            </div>
+            <hr>
+            <div class="my-input-group-container">
+              <div class="my-input-container">
+                <label for="">สถานะเรียกเก็บ</label>
+                <select class="my-input my-input-sm" id="input1">
+                  <option value="1" selected>เงินสด</option>
+                  <option value="2">โอนผ่าน QR</option>
+                </select>
+              </div>
+            </div>
+            <div class="my-input-group-container">
+              <div class="my-input-container">
+                <label for="">รายละเอียดการเรียกเก็บ (ถ้ามี)</label>
+                <textarea class="my-input my-input-sm" name="" id="" rows="3" placeholder="โอนไปธนาคาร : กสิกรไทย หรือ โอน 300 เงินสด 500"></textarea>
+              </div>
+            </div>
+            <div class="my-input-group-container">
+              <div class="my-input-container">
+                <label for="">หมายเหตุ อื่นๆ</label>
+                <input type="text" class="my-input my-input-sm" placeholder="รายละเอียดเพิ่มเติม">
+              </div>
+              <div class="my-input-container">
+                <label for="">วันที่รับงานซ่อม</label>
+                <input type="date" class="my-input my-input-sm" placeholder="ค่าบริการ" value="0">
+              </div>
+            </div>
+            <hr>
+            <div class="my-input-group-container p-0">
+              <a href="" class="btn btn-sm btn-primary">เพิ่มงานซ่อมเข้าระบบ</a>
+              <a href="" class="btn btn-sm btn-danger">ล้างข้อมูลที่กรอก</a>
+            </div>
+          </form>
         </div>
       </div>
       <%- include('./components/footer.ejs') %>
@@ -36,6 +145,7 @@
   
   
   <script src="/js/left-menu-expand.js"></script>
+  <script src="/js/selector-popup-list.js"></script>
 
 </body>
 </html>

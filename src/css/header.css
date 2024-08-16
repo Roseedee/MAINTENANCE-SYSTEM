@@ -1,8 +1,8 @@
 header {
+    z-index: 10;
     width: var(--header-w);
     height: var(--header-h);
     position: fixed;
-    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;

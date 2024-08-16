@@ -7,7 +7,8 @@
 }
 
 .my-input.my-input-sm {
-    padding: 5px 10px;
+    font-size: 14px;
+    padding: 7px 10px;
 }
 
 button.my-input {

@@ -3,7 +3,6 @@
     left: var(--sidebar-left-w);
     width: var(--content-w);
     min-height: calc(var(--header-h)-100vh);
-    min-width: var(--content-min-w);
     padding-left: 10px;
     display: flex;
     flex-direction: column;

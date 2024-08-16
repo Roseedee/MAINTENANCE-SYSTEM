@@ -34,3 +34,9 @@ body {
 hr {
     color: #a1a1a1;
 }
+
+small.input-alert {
+    display: block;
+    padding-top: 5px;
+    color: rgba(0, 0, 0, 0.4);
+}

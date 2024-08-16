@@ -26,6 +26,10 @@
 
 @media screen and (max-width: 1150px) {
     :root {
+        /* content */
+        --content-w: 100%;
+
         --sidebar-status: none;
+        --sidebar-left-w: 0px;
     }
 }

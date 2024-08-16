@@ -29,14 +29,15 @@
 
     table.table {
 
-        th, td {
+        th, td, a {
+            vertical-align: middle;
             font-size: var(--table-font-size);
         }
 
         thead tr {
             th{
                 border: none;
-                background-color: antiquewhite;
+                background-color: aliceblue;
             }
     
             th:first-child {
@@ -61,7 +62,11 @@
                 min-width: fit-content;
                 white-space: nowrap;
             }
-            
+
+
+            tr:last-child th, tr:last-child td{
+                border: none;
+            }
         }
     }
 }

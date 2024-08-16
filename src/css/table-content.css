@@ -20,16 +20,7 @@ table.table th, table.table td {
   border: none;
 }
 
-table.table tbody {
-
-  th.fit, td.fit {
-    width: 1px;
-    min-width: fit-content;
-    white-space: nowrap;
-    padding: 10px 20px;
-  }
-  
-
+.table.table tbody {
   th, td {
     background-color: var(--row-data-table-color);
     font-size: var(--table-font-size);
@@ -37,10 +28,17 @@ table.table tbody {
     
     span {
       font-size: var(--table-font-size);
-
     }
   }
 
+  th.fit, td.fit {
+    width: 1px;
+    min-width: fit-content;
+    white-space: nowrap;
+    padding: 10px 20px;
+  }
+
+  
   td.start {
     border-radius: 5px 0px 0px 5px;
   }
@@ -48,5 +46,7 @@ table.table tbody {
   td.end{
     border-radius: 0px 5px 5px 0px;
   }
+
 }
+
   

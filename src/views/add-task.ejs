@@ -8,6 +8,7 @@
   <script src="/js/bootstrap.bundle.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/pages/add-task.css" />
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
@@ -20,11 +21,153 @@
     <%- include('./components/left-sidebar.ejs') %>
     <div class="body">
       <div class="article">
+        <div class="content pb-3">
+            <div class="content-header">
+              <h5>ตัวจัดการเพิ่มเติม</h5>
+              <hr>
+            </div>
+            <a href="" class="btn btn-light ms-4">ดึงข้อมูลลูกค้าเก่าที่เคยซ่อม</a>
+        </div>
         <div class="content">
             <div class="content-header">
               <h5>เพิ่มงานซ่อมที่ต้องค้างคืน</h5>
               <hr>
             </div>
+            <form action="" class="my-form">
+              <span class="details"><span style="color: red; font-weight: bold;">หมายเหตุ!</span> ทิ้งค้างคืนหมายถึงงานซ่อมที่ต้องใช้ระยะเวลาในการซ่อม หรือต้องรออะไหล่ เหตุการณ์นี้จะถูกปรับสถานะเป็น กำลังซ่อม และเราต้องปรับ ซ่อมเสร็จ และมารับเครื่องอีกทีในเหตุการณ์ต่อไป</span>
+              <hr>
+              <div class="my-input-group-container">
+                <div class="my-input-container">
+                  <label for="">ชื่อลูกค้า</label>
+                  <input type="text" class="my-input my-input-sm" placeholder="นายสมมุติ นามสกุลตัวอย่าง">
+                </div>
+                <div class="my-input-container">
+                  <label for="">เบอร์โทรลูกค้า</label>
+                  <input type="text" class="my-input my-input-sm" placeholder="0800000000">
+                </div>
+              </div>
+              <div class="my-input-group-container">
+                <div class="my-input-container">
+                  <label for="">บัตรประชาชน</label>
+                  <input type="text" class="my-input my-input-sm" placeholder="14100000000000">
+                </div>
+                <div class="my-input-container">
+                  <label for="">อีเมล์</label>
+                  <input type="text" class="my-input my-input-sm" placeholder="customer@gmail.com">
+                </div>
+              </div>
+              <hr>
+              <div class="my-input-group-container">
+                <div class="my-input-container">
+                  <label for="">ยี่ห้องานซ่อม <span style="color: green;">#เพิ่มยี่ห้ออัตโนมัติที่ไม่มี</span></label>
+                  <input type="text" class="my-input my-input-sm input-brand-task" placeholder="เลือกรุ่น">
+                  <div class="selector-container">
+                    <div class="popup-selector-list selector-brand-task" id="test">
+                      <a href="/add-task" class="popup-selector-item">Samsung</a>
+                      <a href="/add-task" class="popup-selector-item">Lenovo</a>
+                      <a href="/add-task" class="popup-selector-item">Acer</a>
+                      <a href="/add-task" class="popup-selector-item">Asus</a>
+                      <a href="/add-task" class="popup-selector-item">HP</a>
+                      <a href="/add-task" class="popup-selector-item">Canon</a>
+                      <a href="/add-task" class="popup-selector-item">Brother</a>
+                      <a href="/add-task" class="popup-selector-item">MSI</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="my-input-container">
+                  <label for="">รุ่นงานซ่อม <span style="color: green;">#เพิ่มรุ่นอัตโนมัติที่ไม่มี</span></label>
+                  <input type="text" class="my-input my-input-sm input-model-task" placeholder="เลือกรุ่น">
+                  <div class="selector-container">
+                    <div class="popup-selector-list selector-model-task" id="test">
+                      <a href="/add-task" class="popup-selector-item">Samsung</a>
+                      <a href="/add-task" class="popup-selector-item">Lenovo</a>
+                      <a href="/add-task" class="popup-selector-item">Acer</a>
+                      <a href="/add-task" class="popup-selector-item">Asus</a>
+                      <a href="/add-task" class="popup-selector-item">HP</a>
+                      <a href="/add-task" class="popup-selector-item">Canon</a>
+                      <a href="/add-task" class="popup-selector-item">Brother</a>
+                      <a href="/add-task" class="popup-selector-item">MSI</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-input-group-container">
+                <div class="my-input-container">
+                  <label for="">อาการที่ลูกค้าแจ้ง</label>
+                  <textarea name="" id="" class="my-input my-input-sm" rows="5" placeholder="เครื่องเปิดไม่ติด"></textarea>
+                </div>
+                <div class="my-input-container">
+                  <div class="col-12 pb-3">
+                    <label for="">หมายเลขเครื่อง</label>
+                    <input type="text" class="my-input my-input-sm w-100" placeholder="0x0000000000">
+                  </div>
+                  <div class="col-12">
+                    <label for="">หมายเลข SN</label>
+                    <input type="text" class="my-input my-input-sm w-100" placeholder="0x0000000000">
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="my-input-group-container">
+                <div class="my-input-container">
+                  <label for="">ตำหนิเครื่อง</label>
+                  <input type="text" class="my-input my-input-sm" placeholder="มีรอยมุมขวา">
+                </div>
+                <div class="my-input-container">
+                  <label for="">อุปกรณ์ที่ติดมาด้วย</label>
+                  <input type="text" class="my-input my-input-sm" placeholder="สายชาร์จ กระเป๋า">
+                </div>
+              </div>
+              <div class="my-input-group-container">
+                <div class="my-input-container">
+                  <label for="">สีของอุปกรณ์</label>
+                  <input type="text" class="my-input my-input-sm" placeholder="ทอง ดำ ขาว">
+                </div>
+                <div class="my-input-container">
+                  <label for="">รหัสผ่านอุปกรณ์</label>
+                  <input type="text" class="my-input my-input-sm" placeholder="12345">
+                </div>
+              </div>
+              <hr>
+              <div class="my-input-group-container">
+                <div class="my-input-container">
+                  <label for="">ราคาประเมินซ่อม <span style="color: green;">#สามารถกะราคาได้เช่น 300-800 บาท</span></label>
+                  <input type="number" class="my-input my-input-sm" placeholder="0">
+                </div>
+                <div class="my-input-container">
+                  <label for="">กรณีวางมัดจำ</label>
+                  <input type="number" class="my-input my-input-sm" placeholder="0">
+                </div>
+              </div>
+              <div class="my-input-group-container">
+                <div class="my-input-container">
+                  <label for="">หมายเหตุ อื่นๆ</label>
+                  <input type="text" class="my-input my-input-sm">
+                </div>
+                <div class="my-input-container">
+                  <label for="">ระยะเวลาในการซ่อม</label>
+                  <input type="number" class="my-input my-input-sm" value="1">
+                </div>
+              </div>
+              <div class="my-input-group-container">
+                <div class="my-input-container">
+                  <label for="">วันที่รับงานซ่อม</label>
+                  <input type="date" class="my-input my-input-sm">
+                </div>
+                <div class="my-input-container">
+                  <label for="">ผู้รับงานซ๋อม</label>
+                  <div class="my-input-button-container">
+                    <input type="text" class="my-input my-input-sm" placeholder="รอซีดี เจ๊ะแล๊ะ" readonly>
+                    <a href="" class="my-input">เปลี่ยนผู้ใช้งาน</a>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="my-input-group-container p-0">
+                <a href="" class="btn btn-sm btn-primary">เพิ่มงานซ่อมเข้าระบบ</a>
+                <a href="" class="btn btn-sm btn-danger">ล้างข้อมูลที่กรอก</a>
+              </div>
+            </form>
         </div>
       </div>
       <%- include('./components/footer.ejs') %>
@@ -33,6 +176,7 @@
   
   
   <script src="/js/left-menu-expand.js"></script>
+  <script src="/js/selector-popup-list.js"></script>
 
 </body>
 </html>

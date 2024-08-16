@@ -25,12 +25,29 @@ button.my-input:hover {
     border: 1px solid var(--active-color);
 }
 
+.my-input-button-container {
+    display: flex;
+
+    input.my-input {
+        flex-grow: 1;
+        border-radius: 5px 0px 0px 5px;
+    }
+    a.my-input {
+        display: block;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: white;
+        border-radius: 0px 5px 5px 0px;
+        background-color: #ccc1a4;
+    }
+}
+
 .my-input-group-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 
     .my-input-container:first-child {
         width: 50%;

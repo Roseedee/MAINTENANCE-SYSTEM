@@ -24,3 +24,32 @@ button.my-input:hover {
 .my-input:focus {
     border: 1px solid var(--active-color);
 }
+
+.my-input-group-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 10px;
+
+    .my-input-container:first-child {
+        width: 50%;
+        max-width: 50%;
+    }
+}
+
+.my-input-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    label {
+        display: block;
+        padding-bottom: 5px;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    label * {
+        font-size: 14px;
+    }
+}

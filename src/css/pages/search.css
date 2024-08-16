@@ -20,3 +20,48 @@
     }
 }
 
+.result-search-container {
+    padding: 10px 20px;
+
+}
+
+.result-search-item {
+
+    table.table {
+
+        th, td {
+            font-size: var(--table-font-size);
+        }
+
+        thead tr {
+            th{
+                border: none;
+                background-color: antiquewhite;
+            }
+    
+            th:first-child {
+                text-align: end;
+                border-radius: var(--table-radius) 0px 0px var(--table-radius);
+                width: 1px;
+                min-width: fit-content;
+                white-space: nowrap;
+            }
+            
+            th:last-child {
+                border-radius: 0px var(--table-radius) var(--table-radius) 0px;
+            }
+    
+        }
+    
+        tbody {
+            th:first-child {
+                text-align: end;
+                border-radius: var(--table-radius) 0px 0px var(--table-radius);
+                width: 1px;
+                min-width: fit-content;
+                white-space: nowrap;
+            }
+            
+        }
+    }
+}

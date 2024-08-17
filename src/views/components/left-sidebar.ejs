@@ -7,7 +7,7 @@
       <a class="left-menu-item <%= page === 'search' ? 'active' : '' %>" href="/search"><p><img src="/icons/left-menu/search.png"/>ค้นหาและจัดการงานซ่อม</p></a>
       <a class="left-menu-item <%= page === 'quick-add-task' ? 'active' : '' %>" href="/quick-add-task"><p><img src="/icons/left-menu/quick-add.png"/>เพิ่มงานซ่อมด่วน</p><p>หน้าร้าน</p></a>
       <a class="left-menu-item <%= page === 'add-task' ? 'active' : '' %>" href="/add-task"><p><img src="/icons/left-menu/add.png"/>เพิ่มงานซ่อมทิ้งไว้</p><p>ค้างคืน</p></a>
-      <div class="left-menu-item-expand" href="">
+      <div class="left-menu-item-expand <%= page === 'manage' ? 'active' : '' %>">
         <div class="left-menu-expand-header">
           <p class="m-0">
             <img src="/icons/left-menu/brand.png"/>
@@ -16,7 +16,7 @@
           <img class="icon-expand" src="/icons/left-menu/arrow.png" alt="">
         </div>
         <div class="sub-left-menu-expand-container">
-          <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/brand.png"/>จัดการยี่ห้อ</a>
+          <a class="sub-left-menu-item <%= page === 'manage' && sub_menu === 'brand-task-manage' ? 'active' : '' %>" href="/manage/brand-task-manage"><img src="/icons/left-menu/brand.png"/>จัดการยี่ห้อ</a>
           <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/model.png"/>จัดการรุ่น</a>
           <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/status.png"/>จัดการสถานะ</a>
         </div>

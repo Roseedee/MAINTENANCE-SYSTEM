@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maintenance System</title>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+  <script src="/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/pages/brandk-task-manage.css" />
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+</head>
+<body>
+  <%- include('./components/header.ejs') %>
+
+  <div class="main">
+    <%- include('./components/left-sidebar.ejs') %>
+    <div class="body">
+      <div class="article">
+        <div class="content pb-3">
+            <div class="content-header">
+              <h5>ตัวจัดการเพิ่มเติม</h5>
+              <hr>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-header">
+              <h5>เพิ่มงานซ่อมที่ต้องค้างคืน</h5>
+              <hr>
+            </div>
+            
+        </div>
+      </div>
+      <%- include('./components/footer.ejs') %>
+    </div>
+  </div>
+  
+  
+  <script src="/js/left-menu-expand.js"></script>
+
+</body>
+</html>

@@ -93,7 +93,7 @@
         }
 
         .sub-left-menu-expand-container {
-            display: block;
+            display: none;
             width: 100%;
             padding: 0px 20px;
 

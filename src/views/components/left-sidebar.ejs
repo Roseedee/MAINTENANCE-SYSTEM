@@ -16,8 +16,8 @@
           <img class="icon-expand" src="/icons/left-menu/arrow.png" alt="">
         </div>
         <div class="sub-left-menu-expand-container">
-          <a class="sub-left-menu-item <%= page === 'manage' ? 'active' : '' %>" href="/manage/brand-task-manage"><img src="/icons/left-menu/brand.png"/>จัดการยี่ห้อ</a>
-          <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/model.png"/>จัดการรุ่น</a>
+          <a class="sub-left-menu-item <%= page === 'manage' && sub_menu === 'brand-task-manage' ? 'active' : '' %>" href="/manage/brand-task-manage"><img src="/icons/left-menu/brand.png"/>จัดการยี่ห้อ</a>
+          <a class="sub-left-menu-item <%= page === 'manage' && sub_menu === 'model-task-manage' ? 'active' : '' %>" href="/manage/model-task-manage"><img src="/icons/left-menu/model.png"/>จัดการรุ่น</a>
           <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/status.png"/>จัดการสถานะ</a>
         </div>
       </div>

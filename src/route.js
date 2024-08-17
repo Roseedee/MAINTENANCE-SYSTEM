@@ -35,4 +35,11 @@ route.get('/manage/brand-task-manage', (req, res) => {
     })
 })
 
+route.get('/manage/model-task-manage', (req, res) => {
+    res.render(path.join(view_path, 'model-task-manage'), {
+        page: 'manage',
+        sub_menu: 'model-task-manage'
+    })
+})
+
 module.exports = route;

@@ -45,7 +45,6 @@ button.my-input:hover {
 }
 
 .my-input-group-container {
-    flex-shrink: 1;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

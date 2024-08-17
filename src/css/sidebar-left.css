@@ -54,7 +54,6 @@
     }
 
     .left-menu-item-expand {
-        display: block;
         width: 100%;
         
         .left-menu-expand-header {
@@ -94,7 +93,7 @@
         }
 
         .sub-left-menu-expand-container {
-            display: none;
+            display: block;
             width: 100%;
             padding: 0px 20px;
 

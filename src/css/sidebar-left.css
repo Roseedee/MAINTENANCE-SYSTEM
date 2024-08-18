@@ -2,7 +2,6 @@
     display: var(--sidebar-status);
     position: fixed;
     width: var(--sidebar-left-w);
-    height: 100%;
 }
 
 .left-menu-container {

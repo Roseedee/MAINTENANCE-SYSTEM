@@ -1,7 +1,7 @@
 header {
     z-index: 10;
     width: var(--header-w);
-    height: var(--header-h);
+    /* height: var(--header-h); */
     position: fixed;
     display: flex;
     align-items: center;

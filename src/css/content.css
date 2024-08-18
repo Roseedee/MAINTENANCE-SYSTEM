@@ -2,7 +2,6 @@
     position: relative;
     left: var(--sidebar-left-w);
     width: var(--content-w);
-    min-height: calc(var(--header-h)-100vh);
     padding-left: 10px;
     display: flex;
     flex-direction: column;

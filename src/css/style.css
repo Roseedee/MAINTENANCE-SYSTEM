@@ -12,7 +12,6 @@
 
 body {
     background-color: var(--main-background);
-    min-height: 100vh;
 }
 
 .my-background {
@@ -22,17 +21,15 @@ body {
 
 .main {
     position: absolute;
-    top: var(--header-h);
     left: 0px;
     width: 100%;
-    min-height: 92vh;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 }
 
 hr {
-    color: #a1a1a1;
+    color: #b3aeae;
 }
 
 small.input-alert {

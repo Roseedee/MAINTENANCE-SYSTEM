@@ -28,8 +28,8 @@ button.my-input:hover {
 }
 
 a.my-icon-btn {
-    border-radius: 5px;
     display: block;
+    border-radius: 5px;
     padding: 5px 15px;
     text-decoration: none;
     color: #484848;

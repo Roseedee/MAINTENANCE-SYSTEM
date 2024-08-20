@@ -1,0 +1,63 @@
+.my-form {
+    padding: 10px 20px; 
+}
+
+.my-input-group-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding-bottom: 15px;
+
+    .my-input-container {
+        width: 50%;
+    }
+}
+
+.my-input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    label {
+        display: block;
+        padding-bottom: 5px;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    label * {
+        font-size: 14px;
+    }
+}
+
+.my-input-button-container {
+    display: flex;
+
+    input.my-input {
+        flex-grow: 1;
+        border-radius: 5px 0px 0px 5px;
+    }
+    a.my-input {
+        display: block;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: white;
+        border-radius: 0px 5px 5px 0px;
+        background-color: #ccc1a4;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .my-input-group-container {
+        flex-wrap: wrap;
+
+        .my-input-container {
+            width: 100%;
+        }
+    }
+
+    .my-input-container {
+        width: 100%;
+    }
+}

@@ -22,6 +22,8 @@ route.get('/quick-add-task', (req, res) => {
     })
 })
 
+
+//manages
 route.get('/add-task', (req, res) => {
     res.render(path.join(view_path, 'add-task'), {
         page: 'add-task'
@@ -29,16 +31,23 @@ route.get('/add-task', (req, res) => {
 })
 
 route.get('/manage/brand-task-manage', (req, res) => {
-    res.render(path.join(view_path, 'brand-task-manage'), {
+    res.render(path.join(view_path, 'manages', 'brand-task-manage'), {
         page: 'manage',
         sub_menu: 'brand-task-manage'
     })
 })
 
 route.get('/manage/model-task-manage', (req, res) => {
-    res.render(path.join(view_path, 'model-task-manage'), {
+    res.render(path.join(view_path, 'manages', 'model-task-manage'), {
         page: 'manage',
         sub_menu: 'model-task-manage'
+    })
+})
+
+route.get('/manage/status-task-manage', (req, res) => {
+    res.render(path.join(view_path, 'manages', 'status-task-manage'), {
+        page: 'manage',
+        sub_menu: 'status-task-manage'
     })
 })
 

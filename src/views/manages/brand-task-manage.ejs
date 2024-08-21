@@ -28,6 +28,11 @@
               <div class="my-form">
                 <div class="my-input-group-container p-0">
                   <a href="" class="my-icon-btn my-btn-sm my-btn-light"><img src="/icons/brand.png" alt=""> เพิ่มยี่ห้อที่ไม่มีในระบบ</a>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Launch demo modal
+                  </button>
+                  
+                  
                 </div>
               </div>
             </div>
@@ -151,6 +156,8 @@
       <%- include('../components/footer.ejs') %>
     </div>
   </div>
+  
+  <%- include('./components/add-brand-task-modal.ejs') %>
 
   <script src="/js/calc-layout.js"></script>
   <script src="/js/left-menu-expand.js"></script>

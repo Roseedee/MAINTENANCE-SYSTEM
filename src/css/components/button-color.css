@@ -1,7 +1,16 @@
 .my-button-primary {
+    color: white;
     background-color: var(--color-primary);
     &:hover {
         background-color: var(--color-primary-hover);
+    }
+}
+
+.my-button-save {
+    color: black;
+    background-color: #accda3;
+    &:hover {
+        background-color: #c0e6b5;
     }
 }
 

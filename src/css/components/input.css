@@ -1,35 +1,63 @@
 @import url(input-container.css);
 
+:root {
+    --input-transition-time: 0.5s;
+    --input-radius: 5px;
+}
+
+/* input */
 .my-input {
     outline: none;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    padding: 10px;
-    transition: 0.5s;
-}
-
-.my-input.my-input-sm {
+    border-radius: var(--input-radius);
     font-size: 14px;
     padding: 7px 10px;
+    transition: var(--input-transition-time);
 }
 
-button.my-input {
-    padding: 10px 20px;
-    background-color: var(--active-color);
-    color: white;
-}
-
-button.my-input:hover {
-    background-color: var(--active-hover-color);
+.my-input-lg {
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: var(--input-radius);
+    padding: 10px;
+    transition: var(--input-transition-time);
 }
 
 .my-input:focus {
     border: 1px solid var(--active-color);
 }
 
+/* button */
+.my-button {
+    border-radius: var(--input-radius);
+    padding: 10px 20px;
+    background-color: var(--active-color);
+    color: white;
+    transition: var(--input-transition-time);
+}
+
+.my-button:hover {
+    background-color: var(--active-hover-color);
+}
+
+.my-button-change-account {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    background-color: #ffdcb1;
+    border-radius: 0px var(--input-radius) var(--input-radius) 0px;
+    padding: 5px 10px;
+    transition: var(--input-transition-time);
+}
+
+.my-button-change-account:hover {
+    background-color: #ffcf95;
+}
+
 .my-icon-btn {
     display: flex;
-    border-radius: 5px;
+    border-radius: var(--input-radius);
     padding: 5px 15px;
     text-decoration: none;
     color: #484848;
@@ -48,7 +76,7 @@ button.my-input:hover {
 .my-icon-btn-sm {
     border: none;
     display: flex;
-    border-radius: 5px;
+    border-radius: var(--input-radius);
     padding: 5px 10px;
     text-decoration: none;
     color: #484848;

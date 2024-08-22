@@ -1,0 +1,48 @@
+.my-button-primary {
+    background-color: var(--color-primary);
+    &:hover {
+        background-color: var(--color-primary-hover);
+    }
+}
+
+.my-button-light {
+    background-color: var(--color-light);
+    &:hover {
+        background-color: var(--color-light-hover);
+    }
+}
+
+.my-button-inprogress {
+    color: white;
+    background-color: var(--color-inprogress);
+    &:hover {
+        color: white;
+        background-color: var(--color-inprogress-hover);
+    }
+}
+
+.my-button-success {
+    color: white;
+    background-color: var(--color-success);
+    &:hover {
+        color: white;
+        background-color: var(--color-success-hover);
+    }
+}
+
+.my-button-received {
+    color: white;
+    background-color: var(--color-received);
+    &:hover {
+        background-color: var(--color-received-hover);
+    }
+}
+
+.my-button-cancel {
+    color: white;
+    background-color: var(--color-cancel);
+    &:hover {
+        color: white;
+        background-color: var(--color-cancel-hover);
+    }
+}

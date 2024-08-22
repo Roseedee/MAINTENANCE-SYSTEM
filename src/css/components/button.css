@@ -1,0 +1,68 @@
+@import url(button-color.css);
+
+.my-button {
+    border: none;
+    border-radius: var(--input-radius);
+    padding: 5px 13px;
+    color: black;
+    text-decoration: none;
+    transition: var(--input-transition-time);
+}
+
+.my-button-lg {
+    border: none;
+    border-radius: var(--input-radius);
+    padding: 10px 20px;
+    color: white;
+    transition: var(--input-transition-time);
+}
+
+.my-icon-button {
+    display: flex;
+    align-items: center;
+    border-radius: var(--input-radius);
+    padding: 5px 13px;
+    text-decoration: none;
+    color: #484848;
+    transition: 0.3s;
+
+    img {
+        transition: 0.3s;
+        width: 16px;
+        opacity: 0.7;
+        margin-right: 8px;
+    }
+}
+
+.my-icon-button-sm {
+    display: flex;
+    align-items: center;
+    border-radius: var(--input-radius);
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #484848;
+    transition: 0.3s;
+    font-size: 12px;
+
+    img {
+        transition: 0.3s;
+        width: 12px;
+        opacity: 0.7;
+        margin-right: 8px;
+    }
+}
+
+.my-button-change-account {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    background-color: #25BEA0;
+    border-radius: 0px var(--input-radius) var(--input-radius) 0px;
+    padding: 5px 10px;
+    transition: var(--input-transition-time);
+}
+
+.my-button-change-account:hover {
+    background-color: #22a48a;
+}

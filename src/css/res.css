@@ -21,6 +21,19 @@
     --table-radius: 5px;
     --table-font-size: 0.8rem;
     --row-data-table-color: #f4f4f4;
+
+    --color-primary: #320e47;
+    --color-primary-hover: #673b80;
+    --color-inprogress: #FEAB0C;
+    --color-inprogress-hover: #ffbd43;
+    --color-success: #25BEA0;
+    --color-success-hover: #36e3c1;
+    --color-received: #3D9CDC;
+    --color-received-hover: #51b6fa;
+    --color-cancel: #E75445;
+    --color-cancel-hover: #fb7768;
+    --color-light: #e5e5e5;
+    --color-light-hover: #d2d2d2;
 }
 
 @media screen and (max-width: 1150px) {

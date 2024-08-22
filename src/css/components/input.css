@@ -27,7 +27,7 @@ button.my-input:hover {
     border: 1px solid var(--active-color);
 }
 
-a.my-icon-btn {
+.my-icon-btn {
     display: flex;
     border-radius: 5px;
     padding: 5px 15px;
@@ -45,7 +45,8 @@ a.my-icon-btn {
     }
 }
 
-a.my-icon-btn-sm {
+.my-icon-btn-sm {
+    border: none;
     display: flex;
     border-radius: 5px;
     padding: 5px 10px;
@@ -57,13 +58,13 @@ a.my-icon-btn-sm {
 
     img {
         transition: 0.3s;
-        width: 16px;
+        width: 14px;
         opacity: 0.7;
         margin-right: 8px;
     }
 }
 
-a.my-icon-btn:hover {
+.my-icon-btn:hover {
     color: black;
     background-color: #cdcdcd;
 
@@ -72,6 +73,6 @@ a.my-icon-btn:hover {
     }
 }
 
-a.my-btn-light {
+.my-btn-light {
     background-color: #e5e5e5;
 }

@@ -103,6 +103,7 @@
                 align-items: center;
                 padding: 10px;
                 border-radius: 5px;
+                margin-bottom: 5px;
 
                 img {
                     height: 16px;
@@ -123,7 +124,7 @@
 }
 
 div.sidebar-left nav.left-menu-container a.active {
-    background-color: aliceblue;
+    background-color: #f1f1f1;
 }
 
 div.sidebar-left nav.left-menu-container div.left-menu-item-expand.active {
@@ -132,7 +133,7 @@ div.sidebar-left nav.left-menu-container div.left-menu-item-expand.active {
         display: block;
 
         a.active {
-            background-color: #ff7070;
+            background-color: #f1f1f1;
         }
     }
 }

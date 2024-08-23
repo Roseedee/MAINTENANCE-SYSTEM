@@ -11,7 +11,15 @@ route.get('/', (req, res) => {
 })
 
 route.get('/signin', (req, res) => {
-    res.render(path.join(view_path, 'signin'));
+    res.render(path.join(view_path, 'signin'), {
+        changeAccount: false 
+    });
+})
+
+route.get('/signin/change-account', (req, res) => {
+    res.render(path.join(view_path, 'signin'), {
+        changeAccount: true 
+    })
 })
 
 route.get('/search', (req, res) => {

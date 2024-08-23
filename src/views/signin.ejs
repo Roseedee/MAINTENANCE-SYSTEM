@@ -13,15 +13,23 @@
 </head>
 <body>
   <div class="form-card my-background">
-    <div class="user-img">
+    <% if (!changeAccount) { %>
+      <div class="user-img">
         <img src="/users/my-icon.jpg" alt="">
-    </div>
-    <h3>Roseedee</h3>
+      </div>
+      <h3>Roseedee</h3>  
+    <% }else { %>
+      <div class="user-img">
+        <img src="/brand/logo-profile.png" alt="">
+      </div>
+    <% } %>
     <form action="">
-        <!-- <div class="my-input-container">
-            <label for="">ชื่อผู้ใช้งาน</label>
-            <input type="text" class="my-input" placeholder="user123" name="username">
-        </div> -->
+        <% if (changeAccount) { %>
+          <div class="my-input-container">
+              <label for="">ชื่อผู้ใช้งาน</label>
+              <input type="text" class="my-input" placeholder="user123" name="username">
+          </div>
+        <% } %>
         <div class="my-input-container">
             <label for="">รหัสผ่าน</label>
             <div class="my-input-button-container">
@@ -31,7 +39,11 @@
         </div>
         <button type="submit" class="my-button my-button-save">เข้าสู่ระบบ</button>
     </form>
-    <a class="change-account pt-3" href=""><img src="/icons/logout.png" alt=""> สลับชื่อผู้ใช้งาน</a>
+    <% if(!changeAccount) { %>
+      <a class="change-account pt-3" href="/signin/change-account"><img src="/icons/logout.png" alt=""> สลับชื่อผู้ใช้งาน</a>
+    <% }else { %>
+      <a class="change-account pt-3" href="javascript:history.back()">ย้อนกลับ</a>
+    <% } %>
   </div>
 </body>
 </html>

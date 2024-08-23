@@ -19,5 +19,5 @@ app.use('/css', express.static(path.join(__dirname, 'css')));
 app.use('/js', express.static(path.join(__dirname, 'js')));
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`Maintenance System run on port ${port}`)
 })

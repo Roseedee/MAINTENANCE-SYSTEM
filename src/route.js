@@ -10,6 +10,10 @@ route.get('/', (req, res) => {
     });
 })
 
+route.get('/signin', (req, res) => {
+    res.render(path.join(view_path, 'signin'));
+})
+
 route.get('/search', (req, res) => {
     res.render(path.join(view_path, 'search'), {
         page: 'search'

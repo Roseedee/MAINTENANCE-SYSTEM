@@ -38,13 +38,20 @@
         flex-grow: 1;
         border-radius: 5px 0px 0px 5px;
     }
-    a.my-input {
+    a.my-button {
         display: block;
-        padding: 5px 10px;
+        padding: 5px 8px;
         text-decoration: none;
-        color: white;
         border-radius: 0px 5px 5px 0px;
-        background-color: #ccc1a4;
+        img {
+            width: 22px;
+            opacity: 0.5;
+            transition: var(--input-transition-time);
+        }
+
+        &:hover img {
+            opacity: 1;
+        }
     }
 }
 

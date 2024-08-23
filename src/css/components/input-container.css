@@ -31,6 +31,28 @@
     }
 }
 
+.fillter-content {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-input-inline-container {
+    display: flex;
+    gap: 10px;
+
+    & > div {
+        border-radius: 5px;
+        padding: 5px 15px;
+        border: 1px solid #ebebeb;
+        
+        label {
+            font-size: 14px;
+            color: #c5c5c5;
+        }
+    }
+}
+
 .my-input-button-container {
     display: flex;
 
@@ -54,6 +76,8 @@
         }
     }
 }
+
+
 
 @media screen and (max-width: 700px) {
     .my-input-group-container {

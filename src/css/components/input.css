@@ -39,3 +39,22 @@
     border: 1px solid var(--color-primary);
 }
 
+.my-input-inline {
+    border: none;
+    font-size: 14px;
+    transition: var(--input-transition-time);
+
+    &:focus {
+        outline: none;
+    }
+
+    &::placeholder {
+        color: #dadada;
+    }
+}
+
+select.my-input-inline {
+    padding-inline: 10px;
+}
+
+

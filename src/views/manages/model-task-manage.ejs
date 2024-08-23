@@ -8,6 +8,7 @@
   <script src="/js/bootstrap.bundle.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/pages/model-task-manage.css" />
 
 </head>
 <body>
@@ -18,18 +19,187 @@
     <div class="body">
       <div class="article">
         <div class="content pb-3">
-            <div class="content-header">
-              <h5>ตัวจัดการเพิ่มเติม</h5>
-              <hr>
-              
+          <div class="content-header">
+            <h5>ตัวจัดการเพิ่มเติม</h5>
+            <hr>
+            <div class="my-form">
+              <div class="my-input-group-container p-0">
+                <a href="" class="my-icon-button my-button-light" data-bs-toggle="modal"
+                  data-bs-target="#new-brand"><img src="/icons/brand.png" alt=""> เพิ่มรุ่นที่ไม่มีในระบบ</a>
+              </div>
             </div>
+            <div class="modal fade" id="new-brand" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <form action="">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="exampleModalLabel">จัดการรุ่นของอุปกรณ์</h4>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="my-input-container">
+                        <label for="">รุ่นอุปกรณ์</label>
+                        <input type="text" class="my-input my-input-sm" placeholder="ไทย - อังกฤษ - ตัวเลข">
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="my-icon-button-sm my-button-light" data-bs-dismiss="modal"><img
+                          src="/icons/close.png" alt=""> ยกเลิก</>
+                        <button type="submit" class="my-icon-button-sm my-button-save"><img src="/icons/save.png"
+                            alt=""> บันทึกข้อมูล</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="content">
-            <div class="content-header">
-              <h5>เพิ่มงานซ่อมที่ต้องค้างคืน</h5>
-              <hr>
+          <div class="content-header">
+            <h5>จัดการรุ่นของอุปกรณ์</h5>
+            <hr>
+          </div>
+          <form class="fillter-content">
+            <div class="my-input-inline-container">
+              <div>
+                <label for="">แสดง</label>
+                <select name="" id="" class="my-input-inline">
+                  <option value="1" selected>20</option>
+                  <option value="2">50</option>
+                  <option value="3">100</option>
+                </select>
+                <label for="" class="ms-1">รายการ</label>
+              </div>
             </div>
-            
+            <div class="my-input-inline-container">
+              <div>
+                <label for="">ตัวกรอง : </label>
+                <select name="" id="" class="my-input-inline">
+                  <option value="1" selected>รุ่นอุปกรณ์</option>
+                </select>
+              </div>
+              <div>
+                <label for="">ค้นหา : </label>
+                <input type="text" class="my-input-inline">
+              </div>
+            </div>
+          </form>
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="text-start">ยี่ห้อ</th>
+                  <th class="text-center fit">เวลา/วันที่เพิ่ม</th>
+                  <th class="text-center">จัดการ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="start">Idaepad 3</td>
+                  <td class="text-center fit">
+                    <span>12/08/2567</span><br>
+                    <span>8:00:12</span>
+                  </td>
+                  <td class="end fit text-end">
+                    <a href="" class="my-icon-button-sm my-button-light" data-bs-toggle="modal" data-bs-target="#brand001"><img src="/icons/edit.png" alt="">แก้ไข</a>
+                  </td>
+                  <div class="modal fade" id="brand001" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <form action="">
+                          <div class="modal-header">
+                            <h4 class="modal-title" id="exampleModalLabel">จัดการรุ่นอุปกรณ์</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="my-input-container">
+                              <label for="">รุ่นอุปกรณ์</label>
+                              <input type="text" class="my-input my-input-sm" placeholder="ไทย - อังกฤษ - ตัวเลข" value="Idaepad 3">
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button class="my-icon-button-sm my-button-light" data-bs-dismiss="modal"><img src="/icons/close.png" alt=""> ยกเลิก</>
+                            <button type="submit" class="my-icon-button-sm my-button-save"><imgsrc="/icons/save.png" alt=""> บันทึกข้อมูล</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </tr>
+                <tr>
+                  <td class="start">Idaepad 5</td>
+                  <td class="text-center fit">
+                    <span>12/08/2567</span><br>
+                    <span>8:00:12</span>
+                  </td>
+                  <td class="end fit text-end">
+                    <a href="" class="my-icon-button-sm my-button-light" data-bs-toggle="modal"
+                      data-bs-target="#brand002"><img src="/icons/edit.png" alt="">แก้ไข</a>
+                  </td>
+                  <div class="modal fade" id="brand002" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <form action="">
+                          <div class="modal-header">
+                            <h4 class="modal-title" id="exampleModalLabel">จัดการรุ่นอุปกรณ์</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                              aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="my-input-container">
+                              <label for="">รุ่นอุปกรณ์</label>
+                              <input type="text" class="my-input my-input-sm" placeholder="ไทย - อังกฤษ - ตัวเลข"
+                                value="Idaepad 5">
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button class="my-icon-button-sm my-button-light" data-bs-dismiss="modal"><img src="/icons/close.png" alt=""> ยกเลิก</>
+                            <button type="submit" class="my-icon-button-sm my-button-save"><imgsrc="/icons/save.png" alt=""> บันทึกข้อมูล</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </tr>
+                <tr>
+                  <td class="start">Idaepad 12</td>
+                  <td class="text-center fit">
+                    <span>12/08/2567</span><br>
+                    <span>8:00:12</span>
+                  </td>
+                  <td class="end fit text-end">
+                    <a href="" class="my-icon-button-sm my-button-light" data-bs-toggle="modal" data-bs-target="#brand003"><img src="/icons/edit.png" alt="">แก้ไข</a>
+                  </td>
+                  <div class="modal fade" id="brand003" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <form action="">
+                          <div class="modal-header">
+                            <h4 class="modal-title" id="exampleModalLabel">จัดการรุ่นอุปกรณ์</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="my-input-container">
+                              <label for="">รุ่นอุปกรณ์</label>
+                              <input type="text" class="my-input my-input-sm" placeholder="ไทย - อังกฤษ - ตัวเลข" value="Idaepad 12">
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button class="my-icon-button-sm my-button-light" data-bs-dismiss="modal"><img src="/icons/close.png" alt=""> ยกเลิก</>
+                            <button type="submit" class="my-icon-button-sm my-button-save"><imgsrc="/icons/save.png" alt=""> บันทึกข้อมูล</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       <%- include('../components/footer.ejs') %>

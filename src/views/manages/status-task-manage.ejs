@@ -8,6 +8,7 @@
   <script src="/js/bootstrap.bundle.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/pages/status-task-manage.css" />
 
 </head>
 <body>
@@ -19,16 +20,79 @@
       <div class="article">
         <div class="content pb-3">
             <div class="content-header">
-              <h5>ตัวจัดการเพิ่มเติม</h5>
+              <h5>สถานะหลักของงานซ่อม</h5>
               <hr>
+            </div>
+            <div class="table-container">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th class="start fit">สถานะงานซ่อม</th>
+                    <th>รายละเอียด</th>
+                    <th class="text-center end">สีสถานะ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="fit" style="color: var(--color-inprogress);">กำลังซ่อม</td>
+                    <td>คือสถานะที่บ่งบอกว่างานซ่อมนี้กำลังดำเนินการซ๋อมอยู่</td>
+                    <td class="status-color"><a href="" class="status-color bg-process"></a></td>
+                  </tr>
+                  <tr>
+                    <td class="fit" style="color: var(--color-success);">ซ่อมเสร็จแล้ว</td>
+                    <td>คือสถานะที่บ่งบอกว่างานซ่อมนั่นๆได้ทำการซ่อมเสร็จแล้ว และมีผลกับสรุปยอดงานซ่อมด้วย</td>
+                    <td class="status-color"><a href="" class="status-color bg-success"></a></td>
+                  </tr>
+                  <tr>
+                    <td class="fit" style="color: var(--color-received);">รับเครื่องแล้ว</td>
+                    <td>คือสถานะที่ลูกค้ามารับเครื่องกลับไปแล้วพร้อมกับได้รับเงินเข้าระบบ และมีผลกับสรุปยอดงานซ่อมด้วย</td>
+                    <td class="status-color"><a href="" class="status-color bg-received"></a></td>
+                  </tr>
+                  <tr>
+                    <td class="fit" style="color: var(--color-cancel);">รับเครื่องแล้ว</td>
+                    <td>คือสถานะที่ลูกค้าขอยกเลิกการซ่อม หรือทำการซ่อมไม่ผ่าน จะสมารถใส่เหตุผลและคำอธิบายว่าทำไมซ่อมไม่ได้</td>
+                    <td class="status-color"><a href="" class="status-color bg-cancel"></a></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
         </div>
-        <div class="content">
-            <div class="content-header">
-              <h5>เพิ่มงานซ่อมที่ต้องค้างคืน</h5>
-              <hr>
+        <div class="content pb-3">
+          <div class="content-header">
+            <h5>ตัวจัดการเพิ่มเติม</h5>
+            <hr>
+          </div>
+          <div class="my-form">
+            <div class="my-input-group-container p-0">
+              <a href="" class="my-icon-button my-button-light" data-bs-toggle="modal"
+                data-bs-target="#new-brand"><img src="/icons/pc.png" alt="">สร้างสถานะงานซ่อม</a>
             </div>
-            
+          </div>
+          <div class="modal fade" id="new-brand" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <form action="">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">จัดการรุ่นของอุปกรณ์</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="my-input-container">
+                      <label for="">รุ่นอุปกรณ์</label>
+                      <input type="text" class="my-input my-input-sm" placeholder="ไทย - อังกฤษ - ตัวเลข">
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="my-icon-button-sm my-button-light" data-bs-dismiss="modal"><img
+                        src="/icons/close.png" alt=""> ยกเลิก</>
+                      <button type="submit" class="my-icon-button-sm my-button-save"><img src="/icons/save.png"
+                          alt=""> บันทึกข้อมูล</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <%- include('../components/footer.ejs') %>

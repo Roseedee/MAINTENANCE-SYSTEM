@@ -1,0 +1,72 @@
+/* @import url(../components/table.css); */
+
+.bg-process {
+    background-color: var(--color-inprogress);
+}
+
+.bg-success {
+    background-color: var(--color-success);
+}
+
+.bg-received {
+    background-color: var(--color-received);
+}
+
+.bg-cancel {
+    background-color: var(--color-cancel);
+}
+
+.table-container {
+    width: 100%;
+    padding: 0px 20px;
+}
+
+table.table {
+  /* border: none; */
+  border-collapse: separate;
+  border-spacing: 0px;
+}
+
+table.table th {
+  border: none;
+  background-color: var(--row-data-table-color);
+}
+
+th.fit, td.fit {
+  width: 1px;
+  min-width: 150px;
+  white-space: nowrap;
+  padding: 8px 25px;
+}
+
+.table.table tbody {
+  th, td {
+    background-color: white;
+    font-size: 14px;
+    vertical-align:middle;
+    
+    span {
+      font-size: var(--table-font-size);
+    }
+  }
+
+  
+  th.start {
+    border-radius: 5px 0px 0px 5px;
+  }
+  
+  th.end {
+    border-radius: 0px 5px 5px 0px;
+  }
+
+  td.status-color {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+a.status-color {
+    display: block;
+    width: 30px;
+    height: 20px;
+}

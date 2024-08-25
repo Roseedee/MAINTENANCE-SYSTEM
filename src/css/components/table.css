@@ -18,7 +18,8 @@ table.table th, table.table td {
     background-color: var(--row-data-table-color);
     font-size: var(--table-font-size);
     vertical-align:middle;
-    
+    transition: 0.3s;
+
     span {
       font-size: var(--table-font-size);
     }

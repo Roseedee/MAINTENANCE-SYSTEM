@@ -50,6 +50,8 @@ a {
     text-decoration: none;
     transition: 0.3s;
     font-size: 12px;
+    flex-grow: 1;
+    min-width: 1px;
 
     img {
         transition: 0.3s;
@@ -68,8 +70,22 @@ a {
     border-radius: 0px var(--input-radius) var(--input-radius) 0px;
     padding: 5px 10px;
     transition: var(--input-transition-time);
+    &:hover {
+        background-color: #22a48a;
+    }
 }
 
-.my-button-change-account:hover {
-    background-color: #22a48a;
+.my-icon-button-table-inline {
+    border-radius: var(--input-radius);
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 12px;
+
+    img {
+        transition: 0.3s;
+        width: 12px;
+        opacity: 0.7;
+        margin-right: 8px;
+    }
 }

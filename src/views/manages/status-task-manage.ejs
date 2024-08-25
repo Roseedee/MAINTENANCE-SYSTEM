@@ -36,22 +36,22 @@
                   <tr>
                     <td class="fit" style="color: var(--color-inprogress);">กำลังซ่อม</td>
                     <td>คือสถานะที่บ่งบอกว่างานซ่อมนี้กำลังดำเนินการซ๋อมอยู่</td>
-                    <td class="status-color"><a class="status-color bg-process"></a></td>
+                    <td><div class="status-color bg-process"></div></td>
                   </tr>
                   <tr>
                     <td class="fit" style="color: var(--color-success);">ซ่อมเสร็จแล้ว</td>
                     <td>คือสถานะที่บ่งบอกว่างานซ่อมนั่นๆได้ทำการซ่อมเสร็จแล้ว และมีผลกับสรุปยอดงานซ่อมด้วย</td>
-                    <td class="status-color"><a class="status-color bg-success"></a></td>
+                    <td><div class="status-color bg-success"></div></td>
                   </tr>
                   <tr>
                     <td class="fit" style="color: var(--color-received);">รับเครื่องแล้ว</td>
                     <td>คือสถานะที่ลูกค้ามารับเครื่องกลับไปแล้วพร้อมกับได้รับเงินเข้าระบบ และมีผลกับสรุปยอดงานซ่อมด้วย</td>
-                    <td class="status-color"><a class="status-color bg-received"></a></td>
+                    <td><div class="status-color bg-received"></div></td>
                   </tr>
                   <tr>
                     <td class="fit" style="color: var(--color-cancel);">รับเครื่องแล้ว</td>
                     <td>คือสถานะที่ลูกค้าขอยกเลิกการซ่อม หรือทำการซ่อมไม่ผ่าน จะสมารถใส่เหตุผลและคำอธิบายว่าทำไมซ่อมไม่ได้</td>
-                    <td class="status-color"><a class="status-color bg-cancel"></a></td>
+                    <td class="text-end"><div class="status-color bg-cancel"></div></td>
                   </tr>
                 </tbody>
               </table>
@@ -94,6 +94,54 @@
             </div>
           </div>
         </div>
+        <div class="content pb-3">
+          <div class="content-header">
+            <h5>สถานะหลักของงานซ่อม</h5>
+            <hr>
+          </div>
+          <div class="table-container">
+            <span class="details"><span style="color: red; font-weight: bold;">หมายเหตุ!</span> สถานะที่กำหนดเองคือสถานะทั่วไปที่ใช้บ่งบอกว่างานซ่อมนั่นๆไม่อยู่ในสถานะเกณฑ์หลัก เช่น รอส่งศูนย์ รออะไหล่ รอการซ่อม เพื่อที่จะแจ้งให้ช่างผู้ซ่อม และผู้ที่มาซ่อมทราบว่า งานซ่อมดังกล่าวไปถึงไหนแล้ว</span>
+            <table class="table mt-3">
+              <thead>
+                <tr>
+                  <th class="start fit">สถานะงานซ่อม</th>
+                  <th>รายละเอียด</th>
+                  <th class="text-center">สีสถานะ</th>
+                  <th class="text-center end">จัดการ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fit" style="color: var(--color-inprogress);">สถานะที่สร้างเอง</td>
+                  <td>คือสถานะที่บ่งบอกว่างานซ่อมนี้กำลังดำเนินการซ๋อมอยู่</td>
+                  <td class="status-color"><div class="status-color bg-process"></div></td>
+                  <td class="text-center fit">
+                    <a href="" class="my-icon-button-table-inline my-button-edit"><img src="/icons/edit-white.png" alt="">แก้ไข</a>
+                    <a href="" class="my-icon-button-table-inline my-button-bin"><img src="/icons/trash-bin-white.png" alt="">ลบ</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="fit" style="color: var(--color-inprogress);">สถานะที่สร้างเอง</td>
+                  <td>คือสถานะที่บ่งบอกว่างานซ่อมนี้กำลังดำเนินการซ๋อมอยู่</td>
+                  <td class="status-color"><div class="status-color bg-process"></div></td>
+                  <td class="text-center fit">
+                    <a href="" class="my-icon-button-table-inline my-button-edit"><img src="/icons/edit-white.png" alt="">แก้ไข</a>
+                    <a href="" class="my-icon-button-table-inline my-button-bin"><img src="/icons/trash-bin-white.png" alt="">ลบ</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="fit" style="color: var(--color-inprogress);">สถานะที่สร้างเอง</td>
+                  <td>คือสถานะที่บ่งบอกว่างานซ่อมนี้กำลังดำเนินการซ๋อมอยู่</td>
+                  <td class="status-color"><div class="status-color bg-process"></div></td>
+                  <td class="text-center fit">
+                    <a href="" class="my-icon-button-table-inline my-button-edit"><img src="/icons/edit-white.png" alt="">แก้ไข</a>
+                    <a href="" class="my-icon-button-table-inline my-button-bin"><img src="/icons/trash-bin-white.png" alt="">ลบ</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </div>
       </div>
       <%- include('../components/footer.ejs') %>
     </div>

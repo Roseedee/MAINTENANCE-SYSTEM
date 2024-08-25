@@ -55,3 +55,19 @@
         background-color: var(--color-cancel-hover);
     }
 }
+
+.my-button-edit {
+    color: white;
+    background-color: #0DABFD;
+    &:hover {
+        background-color: #49bfff;
+    }
+}
+
+.my-button-bin {
+    color: white;
+    background-color: #FB686E;
+    &:hover {
+        background-color: #ff9295;
+    }
+}

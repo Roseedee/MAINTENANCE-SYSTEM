@@ -51,23 +51,18 @@ th.fit, td.fit {
   }
 
   
-  th.start {
+  th.start, td.start {
     border-radius: 5px 0px 0px 5px;
   }
   
-  th.end {
+  th.end, td.end {
     border-radius: 0px 5px 5px 0px;
-  }
-
-  td.status-color {
-    display: flex;
-    justify-content: center;
   }
 }
 
-a.status-color {
-    display: block;
-    width: 30px;
-    height: 20px;
-    border-radius: 3px;
+div.status-color {
+  margin: 0px auto;
+  width: 30px;
+  height: 20px;
+  border-radius: 3px;
 }

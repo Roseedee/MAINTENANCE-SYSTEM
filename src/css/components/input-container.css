@@ -70,10 +70,15 @@
             opacity: 0.5;
             transition: var(--input-transition-time);
         }
-
+        
         &:hover img {
             opacity: 1;
         }
+    }
+    input.my-button {
+        border-radius: 0px 5px 5px 0px;
+        padding: 5px;
+        height: 36.6px;
     }
 }
 

@@ -74,20 +74,29 @@
               <div class="modal-content">
                 <form action="">
                   <div class="modal-header">
-                    <h4 class="modal-title" id="exampleModalLabel">จัดการรุ่นของอุปกรณ์</h4>
+                    <h4 class="modal-title" id="exampleModalLabel">จัดการสถานะงานซ่อม</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
                     <div class="my-input-container">
-                      <label for="">รุ่นอุปกรณ์</label>
-                      <input type="text" class="my-input my-input-sm" placeholder="ไทย - อังกฤษ - ตัวเลข">
+                      <label for="">สถานะที่จะสร้าง</label>
+                      <input type="text" class="my-input" placeholder="ไทย - อังกฤษ - ตัวเลข">
+                    </div>
+                    <div class="my-input-container pt-2">
+                      <label for="">รายละเอียดของสถานะ</label>
+                      <textarea class="my-input" placeholder="ไทย - อังกฤษ - ตัวเลข" rows="4"></textarea>
+                    </div>
+                    <div class="my-input-containe pt-2">
+                      <label for="">สีของสถานะ</label>
+                      <div class="my-input-button-container">
+                        <input type="text" class="my-input my-input-sm" placeholder="รอซีดี เจ๊ะแล๊ะ" readonly>
+                        <input type="color" class="my-button">
+                      </div>
                     </div>
                   </div>
                   <div class="modal-footer">
-                    <button class="my-icon-button-sm my-button-light" data-bs-dismiss="modal"><img
-                        src="/icons/close.png" alt=""> ยกเลิก</>
-                      <button type="submit" class="my-icon-button-sm my-button-save"><img src="/icons/save.png"
-                          alt=""> บันทึกข้อมูล</button>
+                    <button class="my-icon-button-sm my-button-light" data-bs-dismiss="modal"><img src="/icons/close.png" alt=""> ยกเลิก</>
+                    <button type="submit" class="my-icon-button-sm my-button-save"><img src="/icons/save.png" alt=""> บันทึกข้อมูล</button>
                   </div>
                 </form>
               </div>

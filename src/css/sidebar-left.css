@@ -28,7 +28,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 10px 10px;
+        padding: 10px 20px;
 
         p {
             margin: 0px;
@@ -58,7 +58,7 @@
         .left-menu-expand-header {
             cursor: pointer;
             text-decoration: none;
-            padding: 10px;
+            padding: 10px 20px;
             color: black;
             display: flex;
             flex-direction: row;

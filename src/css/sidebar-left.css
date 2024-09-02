@@ -94,16 +94,29 @@
         .sub-left-menu-expand-container {
             display: none;
             width: 100%;
-            padding: 0px 20px;
+            padding: 5px 20px;
 
             .sub-left-menu-item {
                 text-decoration: none;
                 color: black;
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
                 padding: 10px;
                 border-radius: 5px;
                 margin-bottom: 5px;
+
+                p {
+                    margin: 0px;
+                }
+        
+                p:nth-child(2) {
+                    padding: 2px 5px;
+                    border-radius: 5px;
+                    background-color: var(--active-color);
+                    color: white;
+                    font-size: 10px;
+                }
 
                 img {
                     height: 16px;

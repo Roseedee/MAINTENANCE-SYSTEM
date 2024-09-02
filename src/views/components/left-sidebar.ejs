@@ -18,12 +18,12 @@
           <img class="icon-expand" src="/icons/left-menu/arrow.png" alt="">
         </div>
         <div class="sub-left-menu-expand-container">
-          <a class="sub-left-menu-item <%= page === 'manage' && sub_menu === 'brand-task-manage' ? 'active' : '' %>" href="/manage/brand-task-manage"><img src="/icons/left-menu/brand.png"/>จัดการยี่ห้อ</a>
-          <a class="sub-left-menu-item <%= page === 'manage' && sub_menu === 'model-task-manage' ? 'active' : '' %>" href="/manage/model-task-manage"><img src="/icons/left-menu/model.png"/>จัดการรุ่น</a>
-          <a class="sub-left-menu-item <%= page === 'manage' && sub_menu === 'status-task-manage' ? 'active' : '' %>" href="/manage/status-task-manage"><img src="/icons/left-menu/status.png"/>จัดการสถานะ</a>
+          <a class="sub-left-menu-item <%= page === 'manage' && sub_menu === 'brand-task-manage' ? 'active' : '' %>" href="/manage/brand-task-manage"><p><img src="/icons/left-menu/brand.png"/>จัดการยี่ห้อ</p></a>
+          <a class="sub-left-menu-item <%= page === 'manage' && sub_menu === 'model-task-manage' ? 'active' : '' %>" href="/manage/model-task-manage"><p><img src="/icons/left-menu/model.png"/>จัดการรุ่น</p></a>
+          <a class="sub-left-menu-item <%= page === 'manage' && sub_menu === 'status-task-manage' ? 'active' : '' %>" href="/manage/status-task-manage"><p><img src="/icons/left-menu/status.png"/>จัดการสถานะ</p></a>
         </div>
       </div>
-      <div class="left-menu-item-expand" href="">
+      <div class="left-menu-item-expand <%= page === 'repair-task' ? 'active' : '' %>">
         <div class="left-menu-expand-header">
           <p class="m-0">
             <img src="/icons/left-menu/treasury.png"/>
@@ -32,11 +32,11 @@
           <img class="icon-expand" src="/icons/left-menu/arrow.png" alt="">
         </div>
         <div class="sub-left-menu-expand-container">
-          <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/treasury.png"/>งานซ่อมทั้งหมด</a>
-          <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/process.png"/>กำลังดำเนินการ</a>
-          <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/complete.png"/>เสร็จแล้ว</a>
-          <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/cancel.png"/>ยกเลิกซ่อม</a>
-          <a class="sub-left-menu-item" href=""><img src="/icons/left-menu/others.png"/>อื่นๆ</a>
+          <a class="sub-left-menu-item <%= page === 'repair-task' && sub_menu === 'all-task' ? 'active' : '' %>" href="/repair-task/all"><p><img src="/icons/left-menu/treasury.png"/>งานซ่อมทั้งหมด</p><p>หน้าร้าน</p></a>
+          <a class="sub-left-menu-item" href=""><p><img src="/icons/left-menu/process.png"/>กำลังดำเนินการ</p><p>หน้าร้าน</p></a>
+          <a class="sub-left-menu-item" href=""><p><img src="/icons/left-menu/complete.png"/>เสร็จแล้ว</p></a>
+          <a class="sub-left-menu-item" href=""><p><img src="/icons/left-menu/cancel.png"/>ยกเลิกซ่อม</p></a>
+          <a class="sub-left-menu-item" href=""><p><img src="/icons/left-menu/others.png"/>อื่นๆ</p></a>
         </div>
       </div>
     </nav>

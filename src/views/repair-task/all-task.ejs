@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maintenance System</title>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+  <script src="/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/pages/all-task.css" />
+
+</head>
+
+<body>
+  <%- include('../components/header.ejs') %>
+
+    <div class="main">
+      <%- include('../components/left-sidebar.ejs') %>
+        <div class="body">
+          <div class="article">
+            <div class="content pb-3">
+              <div class="content-header">
+                <h5>แสดงข้อมูลงานซ่อมทั้งหมด</h5>
+                <hr>
+              </div>
+              
+            </div>
+            
+          </div>
+          <%- include('../components/footer.ejs') %>
+        </div>
+    </div>
+
+    <script src="/js/calc-layout.js"></script>
+    <script src="/js/left-menu-expand.js"></script>
+
+</body>
+
+</html>

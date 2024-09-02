@@ -36,22 +36,22 @@
                   <tr>
                     <td class="fit" style="color: var(--color-inprogress);">กำลังซ่อม</td>
                     <td>คือสถานะที่บ่งบอกว่างานซ่อมนี้กำลังดำเนินการซ๋อมอยู่</td>
-                    <td><div class="status-color bg-process"></div></td>
+                    <td><div class="status-color bg-status-process"></div></td>
                   </tr>
                   <tr>
                     <td class="fit" style="color: var(--color-success);">ซ่อมเสร็จแล้ว</td>
                     <td>คือสถานะที่บ่งบอกว่างานซ่อมนั่นๆได้ทำการซ่อมเสร็จแล้ว และมีผลกับสรุปยอดงานซ่อมด้วย</td>
-                    <td><div class="status-color bg-success"></div></td>
+                    <td><div class="status-color bg-status-success"></div></td>
                   </tr>
                   <tr>
                     <td class="fit" style="color: var(--color-received);">รับเครื่องแล้ว</td>
                     <td>คือสถานะที่ลูกค้ามารับเครื่องกลับไปแล้วพร้อมกับได้รับเงินเข้าระบบ และมีผลกับสรุปยอดงานซ่อมด้วย</td>
-                    <td><div class="status-color bg-received"></div></td>
+                    <td><div class="status-color bg-status-received"></div></td>
                   </tr>
                   <tr>
                     <td class="fit" style="color: var(--color-cancel);">รับเครื่องแล้ว</td>
                     <td>คือสถานะที่ลูกค้าขอยกเลิกการซ่อม หรือทำการซ่อมไม่ผ่าน จะสมารถใส่เหตุผลและคำอธิบายว่าทำไมซ่อมไม่ได้</td>
-                    <td class="text-end"><div class="status-color bg-cancel"></div></td>
+                    <td class="text-end"><div class="status-color bg-status-cancel"></div></td>
                   </tr>
                 </tbody>
               </table>
@@ -89,7 +89,7 @@
                     <div class="my-input-containe pt-2">
                       <label for="">สีของสถานะ</label>
                       <div class="my-input-button-container">
-                        <input type="text" class="my-input my-input-sm" placeholder="รอซีดี เจ๊ะแล๊ะ" readonly>
+                        <input type="text" class="my-input my-input-sm" placeholder="#000000" readonly>
                         <input type="color" class="my-button">
                       </div>
                     </div>
@@ -123,7 +123,7 @@
                 <tr>
                   <td class="fit" style="color: var(--color-inprogress);">สถานะที่สร้างเอง</td>
                   <td>คือสถานะที่บ่งบอกว่างานซ่อมนี้กำลังดำเนินการซ๋อมอยู่</td>
-                  <td class="status-color"><div class="status-color bg-process"></div></td>
+                  <td class="status-color"><div class="status-color bg-status-process"></div></td>
                   <td class="text-center fit">
                     <a href="" class="my-icon-button-table-inline my-button-edit"><img src="/icons/edit-white.png" alt="">แก้ไข</a>
                     <a href="" class="my-icon-button-table-inline my-button-bin"><img src="/icons/trash-bin-white.png" alt="">ลบ</a>
@@ -132,7 +132,7 @@
                 <tr>
                   <td class="fit" style="color: var(--color-inprogress);">สถานะที่สร้างเอง</td>
                   <td>คือสถานะที่บ่งบอกว่างานซ่อมนี้กำลังดำเนินการซ๋อมอยู่</td>
-                  <td class="status-color"><div class="status-color bg-process"></div></td>
+                  <td class="status-color"><div class="status-color bg-status-cancel"></div></td>
                   <td class="text-center fit">
                     <a href="" class="my-icon-button-table-inline my-button-edit"><img src="/icons/edit-white.png" alt="">แก้ไข</a>
                     <a href="" class="my-icon-button-table-inline my-button-bin"><img src="/icons/trash-bin-white.png" alt="">ลบ</a>
@@ -141,7 +141,7 @@
                 <tr>
                   <td class="fit" style="color: var(--color-inprogress);">สถานะที่สร้างเอง</td>
                   <td>คือสถานะที่บ่งบอกว่างานซ่อมนี้กำลังดำเนินการซ๋อมอยู่</td>
-                  <td class="status-color"><div class="status-color bg-process"></div></td>
+                  <td class="status-color"><div class="status-color bg-status-success"></div></td>
                   <td class="text-center fit">
                     <a href="" class="my-icon-button-table-inline my-button-edit"><img src="/icons/edit-white.png" alt="">แก้ไข</a>
                     <a href="" class="my-icon-button-table-inline my-button-bin"><img src="/icons/trash-bin-white.png" alt="">ลบ</a>

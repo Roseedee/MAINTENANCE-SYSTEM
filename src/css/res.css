@@ -7,12 +7,12 @@
     --active-hover-color: #673b80;
 
     /* header */
-    --header-h: 10px;
+    --header-h: 60px;
     --header-w: 100%;
 
     /* sidebar left */
     --sidebar-status: block;
-    --sidebar-left-w: 20%;
+    --sidebar-left-w: 300px;
     
     /* content */
     --content-w: 80%;

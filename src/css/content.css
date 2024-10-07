@@ -1,7 +1,6 @@
 .body {
     position: relative;
     left: var(--sidebar-left-w);
-    width: var(--content-w);
     padding-left: 10px;
     display: flex;
     flex-direction: column;

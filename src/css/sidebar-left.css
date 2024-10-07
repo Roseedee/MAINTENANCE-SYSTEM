@@ -141,11 +141,50 @@ div.sidebar-left nav.left-menu-container a.active {
 }
 
 div.sidebar-left nav.left-menu-container div.left-menu-item-expand.active {
+    background-color: #e1fcff;
     
     .sub-left-menu-expand-container {
         display: block;
 
         a.active {
+            background-color: #f1f1f1;
+        }
+    }
+
+    .left-menu-expand-header {
+        cursor: pointer;
+        text-decoration: none;
+        padding: 10px 20px;
+        color: black;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        p {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            img {
+                height: 16px;
+                padding-right: 10px;
+            }
+        }
+        
+        .icon-expand {
+            height: 12px;
+            transition: transform 0.3s ease;
+            transform: rotate(180deg);
+        }
+        
+        .rotate {
+          transform: rotate(0deg);
+        }
+
+        &:hover {
             background-color: #f1f1f1;
         }
     }

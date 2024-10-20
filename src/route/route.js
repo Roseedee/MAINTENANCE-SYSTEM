@@ -1,9 +1,8 @@
 const express = require('express');
 const route = express.Router();
 const path = require('path');
-const { PassThrough } = require('stream');
 
-const view_path = path.join(__dirname, 'views');
+const view_path = path.join(__dirname, '../views');
 
 route.get('/', (req, res) => {
     res.render(view_path, {
@@ -44,10 +43,7 @@ route.get('/add-task', (req, res) => {
 })
 
 route.get('/manage/brand-task-manage', (req, res) => {
-    res.render(path.join(view_path, 'manages', 'brand-task-manage'), {
-        page: 'manage',
-        sub_menu: 'brand-task-manage'
-    })
+            res.render(path.join(view_path, 'manages', 'brand-task-manage'), {
 })
 
 route.get('/manage/model-task-manage', (req, res) => {

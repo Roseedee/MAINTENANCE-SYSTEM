@@ -1,6 +1,7 @@
 const express = require('express');
 const route = express.Router();
 const path = require('path');
+const connect = require('../database/connectDB')
 
 const view_path = path.join(__dirname, '../views');
 
@@ -43,7 +44,21 @@ route.get('/add-task', (req, res) => {
 })
 
 route.get('/manage/brand-task-manage', (req, res) => {
+
+    connect.query('SELECT * FROM brand', (err, rows, fields) => {
+        if (err) {
+            // หากมีข้อผิดพลาดในการ query ให้แสดง error
+            console.error(err);
+            res.status(500).send('Error fetching data');
+        } else {
+            // ส่งข้อมูลไปยัง template
             res.render(path.join(view_path, 'manages', 'brand-task-manage'), {
+                page: 'manage',
+                sub_menu: 'brand-task-manage',
+                brands: rows // ส่งข้อมูล brands ที่ได้จากฐานข้อมูลไปยัง template
+            });
+        }
+    });
 })
 
 route.get('/manage/model-task-manage', (req, res) => {

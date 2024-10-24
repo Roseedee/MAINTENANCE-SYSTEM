@@ -1,7 +1,12 @@
 const express = require('express');
 const route = express.Router();
 const path = require('path');
-const connect = require('../database/connectDB')
+
+const Database = require('../rest/database')
+
+//model
+const Brand = require('../model/brand');
+
 
 const view_path = path.join(__dirname, '../views');
 
@@ -44,21 +49,25 @@ route.get('/add-task', (req, res) => {
 })
 
 route.get('/manage/brand-task-manage', (req, res) => {
-
-    connect.query('SELECT * FROM brand', (err, rows, fields) => {
+    const formatToDateString = require('../util/dateFormat')
+    const db = new Database()
+    db.connect();
+    db.getBrands((err, rows, fields) => {
+        const brands = rows.map(data => new Brand(data.brand_id, data.brand, data.add_date))
         if (err) {
-            // หากมีข้อผิดพลาดในการ query ให้แสดง error
             console.error(err);
             res.status(500).send('Error fetching data');
         } else {
-            // ส่งข้อมูลไปยัง template
+            const d = formatToDateString(brands[0].add_date)
+            console.log(d)
             res.render(path.join(view_path, 'manages', 'brand-task-manage'), {
                 page: 'manage',
                 sub_menu: 'brand-task-manage',
-                brands: rows // ส่งข้อมูล brands ที่ได้จากฐานข้อมูลไปยัง template
+                brands: brands
             });
         }
     });
+    db.disconnect()
 })
 
 route.get('/manage/model-task-manage', (req, res) => {

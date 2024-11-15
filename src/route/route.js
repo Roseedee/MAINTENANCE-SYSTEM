@@ -2,11 +2,12 @@ const express = require('express');
 const route = express.Router();
 const path = require('path');
 
-const Database = require('../rest/database')
+const Database = require('../db/database')
 
 //model
 const Brand = require('../model/brand');
-
+const Model = require('../model/model');
+const Status = require('../model/status')
 
 const view_path = path.join(__dirname, '../views');
 
@@ -49,17 +50,14 @@ route.get('/add-task', (req, res) => {
 })
 
 route.get('/manage/brand-task-manage', (req, res) => {
-    const formatToDateString = require('../util/dateFormat')
     const db = new Database()
     db.connect();
     db.getBrands((err, rows, fields) => {
-        const brands = rows.map(data => new Brand(data.brand_id, data.brand, data.add_date))
         if (err) {
             console.error(err);
             res.status(500).send('Error fetching data');
         } else {
-            const d = formatToDateString(brands[0].add_date)
-            console.log(d)
+            const brands = rows.map(data => new Brand(data['brand_id'], data['brand'], data['add_date']))
             res.render(path.join(view_path, 'manages', 'brand-task-manage'), {
                 page: 'manage',
                 sub_menu: 'brand-task-manage',
@@ -71,17 +69,42 @@ route.get('/manage/brand-task-manage', (req, res) => {
 })
 
 route.get('/manage/model-task-manage', (req, res) => {
-    res.render(path.join(view_path, 'manages', 'model-task-manage'), {
-        page: 'manage',
-        sub_menu: 'model-task-manage'
-    })
+    const db = new Database()
+    db.connect()
+    db.getModels((err, rows, fields) => {
+        if (err) {
+            console.error(err);
+            res.status(500).send('Error fetching data');
+        } else {
+            const models = rows.map(data => new Model(data['model_id'], data['model'], data['add_date']))
+            res.render(path.join(view_path, 'manages', 'model-task-manage'), {
+                page: 'manage',
+                sub_menu: 'model-task-manage',
+                models: models
+            });
+        }
+    });
+    db.disconnect()
 })
 
 route.get('/manage/status-task-manage', (req, res) => {
-    res.render(path.join(view_path, 'manages', 'status-task-manage'), {
-        page: 'manage',
-        sub_menu: 'status-task-manage'
+    const db = new Database()
+    db.connect()
+    db.getStatus((err, rows, fields) => {
+        if(err) {
+            console.error(err);
+            res.status(500).send('Error fetching data');
+        }else {
+            const status = rows.map(data => new Status(data['status_id'], data['status'], data['date_add'], data['status_note'], data['status_type'], data['status_color']))
+            console.log(status)
+            res.render(path.join(view_path, 'manages', 'status-task-manage'), {
+                page: 'manage',
+                sub_menu: 'status-task-manage',
+                status: status
+            })
+        }
     })
+    db.disconnect()
 })
 
 route.get('/repair-task/all', (req, res) => {

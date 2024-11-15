@@ -95,11 +95,12 @@
                 </tr>
               </thead>
               <tbody>
+                <% models.forEach((model, index) => { %>
                 <tr>
-                  <td class="start">Idaepad 3</td>
+                  <td class="start"><%= model.model %></td>
                   <td class="text-center fit">
-                    <span>12/08/2567</span><br>
-                    <span>8:00:12</span>
+                    <span><%= model.date %></span><br>
+                    <span><%= model.time %></span>
                   </td>
                   <td class="end fit text-end">
                     <a href="" class="my-icon-button-sm my-button-light" data-bs-toggle="modal" data-bs-target="#brand001"><img src="/icons/edit.png" alt="">แก้ไข</a>
@@ -128,75 +129,7 @@
                     </div>
                   </div>
                 </tr>
-                <tr>
-                  <td class="start">Idaepad 5</td>
-                  <td class="text-center fit">
-                    <span>12/08/2567</span><br>
-                    <span>8:00:12</span>
-                  </td>
-                  <td class="end fit text-end">
-                    <a href="" class="my-icon-button-sm my-button-light" data-bs-toggle="modal"
-                      data-bs-target="#brand002"><img src="/icons/edit.png" alt="">แก้ไข</a>
-                  </td>
-                  <div class="modal fade" id="brand002" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <form action="">
-                          <div class="modal-header">
-                            <h4 class="modal-title" id="exampleModalLabel">จัดการรุ่นอุปกรณ์</h4>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                              aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="my-input-container">
-                              <label for="">รุ่นอุปกรณ์</label>
-                              <input type="text" class="my-input my-input-sm" placeholder="ไทย - อังกฤษ - ตัวเลข"
-                                value="Idaepad 5">
-                            </div>
-                          </div>
-                          <div class="modal-footer">
-                            <button class="my-icon-button-sm my-button-light" data-bs-dismiss="modal"><img src="/icons/close.png" alt=""> ยกเลิก</>
-                            <button type="submit" class="my-icon-button-sm my-button-save"><imgsrc="/icons/save.png" alt=""> บันทึกข้อมูล</button>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </tr>
-                <tr>
-                  <td class="start">Idaepad 12</td>
-                  <td class="text-center fit">
-                    <span>12/08/2567</span><br>
-                    <span>8:00:12</span>
-                  </td>
-                  <td class="end fit text-end">
-                    <a href="" class="my-icon-button-sm my-button-light" data-bs-toggle="modal" data-bs-target="#brand003"><img src="/icons/edit.png" alt="">แก้ไข</a>
-                  </td>
-                  <div class="modal fade" id="brand003" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <form action="">
-                          <div class="modal-header">
-                            <h4 class="modal-title" id="exampleModalLabel">จัดการรุ่นอุปกรณ์</h4>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="my-input-container">
-                              <label for="">รุ่นอุปกรณ์</label>
-                              <input type="text" class="my-input my-input-sm" placeholder="ไทย - อังกฤษ - ตัวเลข" value="Idaepad 12">
-                            </div>
-                          </div>
-                          <div class="modal-footer">
-                            <button class="my-icon-button-sm my-button-light" data-bs-dismiss="modal"><img src="/icons/close.png" alt=""> ยกเลิก</>
-                            <button type="submit" class="my-icon-button-sm my-button-save"><imgsrc="/icons/save.png" alt=""> บันทึกข้อมูล</button>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </tr>
+                <% }); %>
               </tbody>
             </table>
           </div>

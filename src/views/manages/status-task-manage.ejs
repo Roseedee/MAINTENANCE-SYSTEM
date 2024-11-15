@@ -33,26 +33,13 @@
                   </tr>
                 </thead>
                 <tbody>
+                  <% status.forEach((status, index) => { %>
                   <tr>
-                    <td class="fit" style="color: var(--color-inprogress);">กำลังซ่อม</td>
-                    <td>คือสถานะที่บ่งบอกว่างานซ่อมนี้กำลังดำเนินการซ๋อมอยู่</td>
-                    <td><div class="status-color bg-status-process"></div></td>
+                    <td class="fit" style="color: <%= status.status_color %>;"><%= status.status %></td>
+                    <td><%= status.status_note %></td>
+                    <td><div class="status-color" style="background-color: <%= status.status_color %>;"></div></td>
                   </tr>
-                  <tr>
-                    <td class="fit" style="color: var(--color-success);">ซ่อมเสร็จแล้ว</td>
-                    <td>คือสถานะที่บ่งบอกว่างานซ่อมนั่นๆได้ทำการซ่อมเสร็จแล้ว และมีผลกับสรุปยอดงานซ่อมด้วย</td>
-                    <td><div class="status-color bg-status-success"></div></td>
-                  </tr>
-                  <tr>
-                    <td class="fit" style="color: var(--color-received);">รับเครื่องแล้ว</td>
-                    <td>คือสถานะที่ลูกค้ามารับเครื่องกลับไปแล้วพร้อมกับได้รับเงินเข้าระบบ และมีผลกับสรุปยอดงานซ่อมด้วย</td>
-                    <td><div class="status-color bg-status-received"></div></td>
-                  </tr>
-                  <tr>
-                    <td class="fit" style="color: var(--color-cancel);">รับเครื่องแล้ว</td>
-                    <td>คือสถานะที่ลูกค้าขอยกเลิกการซ่อม หรือทำการซ่อมไม่ผ่าน จะสมารถใส่เหตุผลและคำอธิบายว่าทำไมซ่อมไม่ได้</td>
-                    <td class="text-end"><div class="status-color bg-status-cancel"></div></td>
-                  </tr>
+                  <% }) %>
                 </tbody>
               </table>
             </div>

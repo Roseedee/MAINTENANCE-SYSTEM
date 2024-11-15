@@ -58,6 +58,7 @@ route.get('/manage/brand-task-manage', (req, res) => {
             res.status(500).send('Error fetching data');
         } else {
             const brands = rows.map(data => new Brand(data['brand_id'], data['brand'], data['add_date']))
+            // console.log(brands)
             res.render(path.join(view_path, 'manages', 'brand-task-manage'), {
                 page: 'manage',
                 sub_menu: 'brand-task-manage',
@@ -77,6 +78,7 @@ route.get('/manage/model-task-manage', (req, res) => {
             res.status(500).send('Error fetching data');
         } else {
             const models = rows.map(data => new Model(data['model_id'], data['model'], data['add_date']))
+            // console.log(models)
             res.render(path.join(view_path, 'manages', 'model-task-manage'), {
                 page: 'manage',
                 sub_menu: 'model-task-manage',
@@ -96,7 +98,7 @@ route.get('/manage/status-task-manage', (req, res) => {
             res.status(500).send('Error fetching data');
         }else {
             const status = rows.map(data => new Status(data['status_id'], data['status'], data['date_add'], data['status_note'], data['status_type'], data['status_color']))
-            console.log(status)
+            // console.log(status)
             res.render(path.join(view_path, 'manages', 'status-task-manage'), {
                 page: 'manage',
                 sub_menu: 'status-task-manage',

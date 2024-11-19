@@ -2,7 +2,7 @@ const express = require('express');
 const route = express.Router();
 const path = require('path');
 
-const Database = require('../db/database')
+const Get = require('../db/Get')
 
 //model
 const Brand = require('../model/brand');
@@ -50,9 +50,9 @@ route.get('/add-task', (req, res) => {
 })
 
 route.get('/manage/brand-task-manage', (req, res) => {
-    const db = new Database()
-    db.connect();
-    db.getBrands((err, rows, fields) => {
+    const get = new Get()
+    get.connect();
+    get.Brands((err, rows, fields) => {
         if (err) {
             console.error(err);
             res.status(500).send('Error fetching data');
@@ -66,13 +66,13 @@ route.get('/manage/brand-task-manage', (req, res) => {
             });
         }
     });
-    db.disconnect()
+    get.disconnect()
 })
 
 route.get('/manage/model-task-manage', (req, res) => {
-    const db = new Database()
-    db.connect()
-    db.getModels((err, rows, fields) => {
+    const get = new Get()
+    get.connect()
+    get.Models((err, rows, fields) => {
         if (err) {
             console.error(err);
             res.status(500).send('Error fetching data');
@@ -86,27 +86,29 @@ route.get('/manage/model-task-manage', (req, res) => {
             });
         }
     });
-    db.disconnect()
+    get.disconnect()
 })
 
 route.get('/manage/status-task-manage', (req, res) => {
-    const db = new Database()
-    db.connect()
-    db.getStatus((err, rows, fields) => {
+    const get = new Get()
+    get.connect()
+    get.Status((err, rows, fields) => {
         if(err) {
             console.error(err);
             res.status(500).send('Error fetching data');
         }else {
-            const status = rows.map(data => new Status(data['status_id'], data['status'], data['date_add'], data['status_note'], data['status_type'], data['status_color']))
-            // console.log(status)
+            const status_default = rows.filter(data => data.status_type === 0).map(data => new Status(data['status_id'], data['status'], data['date_add'], data['status_note'], data['status_type'], data['status_color']))
+            const status_custom = rows.filter(data => data.status_type === 1).map(data => new Status(data['status_id'], data['status'], data['date_add'], data['status_note'], data['status_type'], data['status_color']))
+            // console.log(typeof(rows[3]['status_type']))
             res.render(path.join(view_path, 'manages', 'status-task-manage'), {
                 page: 'manage',
                 sub_menu: 'status-task-manage',
-                status: status
+                status_default: status_default,
+                status_custom: status_custom
             })
         }
     })
-    db.disconnect()
+    get.disconnect()
 })
 
 route.get('/repair-task/all', (req, res) => {

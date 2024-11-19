@@ -1,14 +1,18 @@
 const express = require('express');
 const path = require('path');
 const route = require('./route/route.js');    //route file
+const route_post = require('./route/route.post.js')
+const bodyParser = require('body-parser');
 
 const port = 3000;
 const app = express();
 
 app.set ("view engine", "ejs");
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //route view
 app.use('/' , route)
+app.use('/post', route_post)
 
 //route static file
 app.use(express.static(path.join(__dirname, "../node_modules/bootstrap/dist/")));  

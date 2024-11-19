@@ -33,7 +33,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <% status.forEach((status, index) => { %>
+                  <% status_default.forEach((status, index) => { %>
                   <tr>
                     <td class="fit" style="color: <%= status.status_color %>;"><%= status.status %></td>
                     <td><%= status.status_note %></td>
@@ -59,25 +59,25 @@
             aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
-                <form action="">
+                <form action="/post/status" method="post">
                   <div class="modal-header">
                     <h4 class="modal-title" id="exampleModalLabel">จัดการสถานะงานซ่อม</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
                     <div class="my-input-container">
-                      <label for="">สถานะที่จะสร้าง</label>
-                      <input type="text" class="my-input" placeholder="ไทย - อังกฤษ - ตัวเลข">
+                      <label for="">สถานะที่จะสร้าง*</label>
+                      <input type="text" class="my-input" placeholder="ไทย - อังกฤษ - ตัวเลข" name="status" required>
                     </div>
                     <div class="my-input-container pt-2">
                       <label for="">รายละเอียดของสถานะ</label>
-                      <textarea class="my-input" placeholder="ไทย - อังกฤษ - ตัวเลข" rows="4"></textarea>
+                      <textarea class="my-input" placeholder="ไทย - อังกฤษ - ตัวเลข" rows="4" name="note"></textarea>
                     </div>
                     <div class="my-input-containe pt-2">
-                      <label for="">สีของสถานะ</label>
+                      <label for="">สีของสถานะ*</label>
                       <div class="my-input-button-container">
-                        <input type="text" class="my-input my-input-sm" placeholder="#000000" readonly>
-                        <input type="color" class="my-button">
+                        <input type="text" id="color" class="my-input my-input-sm" placeholder="#000000" readonly>
+                        <input type="color" class="my-button" name="color" onchange="document.getElementById('color').value = this.value;">
                       </div>
                     </div>
                   </div>
@@ -107,33 +107,17 @@
                 </tr>
               </thead>
               <tbody>
+                <% status_custom.forEach((status, index) => { %>
                 <tr>
-                  <td class="fit" style="color: var(--color-inprogress);">สถานะที่สร้างเอง</td>
-                  <td>คือสถานะที่บ่งบอกว่างานซ่อมนี้กำลังดำเนินการซ๋อมอยู่</td>
-                  <td class="status-color"><div class="status-color bg-status-process"></div></td>
+                  <td class="fit" style="color: <%= status.status_color %>;"><%= status.status %></td>
+                  <td><%= status.status_note %></td>
+                  <td class="status-color"><div class="status-color" style="background-color: <%= status.status_color %>;"></div></td>
                   <td class="text-center fit">
                     <a href="" class="my-icon-button-table-inline my-button-edit"><img src="/icons/edit-white.png" alt="">แก้ไข</a>
                     <a href="" class="my-icon-button-table-inline my-button-bin"><img src="/icons/trash-bin-white.png" alt="">ลบ</a>
                   </td>
                 </tr>
-                <tr>
-                  <td class="fit" style="color: var(--color-inprogress);">สถานะที่สร้างเอง</td>
-                  <td>คือสถานะที่บ่งบอกว่างานซ่อมนี้กำลังดำเนินการซ๋อมอยู่</td>
-                  <td class="status-color"><div class="status-color bg-status-cancel"></div></td>
-                  <td class="text-center fit">
-                    <a href="" class="my-icon-button-table-inline my-button-edit"><img src="/icons/edit-white.png" alt="">แก้ไข</a>
-                    <a href="" class="my-icon-button-table-inline my-button-bin"><img src="/icons/trash-bin-white.png" alt="">ลบ</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="fit" style="color: var(--color-inprogress);">สถานะที่สร้างเอง</td>
-                  <td>คือสถานะที่บ่งบอกว่างานซ่อมนี้กำลังดำเนินการซ๋อมอยู่</td>
-                  <td class="status-color"><div class="status-color bg-status-success"></div></td>
-                  <td class="text-center fit">
-                    <a href="" class="my-icon-button-table-inline my-button-edit"><img src="/icons/edit-white.png" alt="">แก้ไข</a>
-                    <a href="" class="my-icon-button-table-inline my-button-bin"><img src="/icons/trash-bin-white.png" alt="">ลบ</a>
-                  </td>
-                </tr>
+                <% }) %>
               </tbody>
             </table>
           </div>
@@ -142,7 +126,9 @@
       <%- include('../components/footer.ejs') %>
     </div>
   </div>
+  <script>
 
+  </script>
   <script src="/js/calc-layout.js"></script>
   <script src="/js/left-menu-expand.js"></script>
 

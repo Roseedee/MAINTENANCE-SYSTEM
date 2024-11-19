@@ -1,16 +1,18 @@
 const rootStyle = getComputedStyle(document.querySelector(':root'))
 
-const header_h = rootStyle.getPropertyValue('--header-h');
-const sidebar_left_w = rootStyle.getPropertyValue('--sidebar-left-w')
-
 onLoad();
 
 function getNumberFromValue(value) {
     const number = value.match(/\d+/); // กรองเฉพาะตัวเลข
+    // console.log(number ? Number(number[0]) : 0)
     return number ? Number(number[0]) : 0; // แปลงเป็นตัวเลข ถ้าไม่มีตัวเลขจะคืนค่า null
 }
 
 function onLoad() {
+
+    const header_h = rootStyle.getPropertyValue('--header-h');
+    const sidebar_left_w = rootStyle.getPropertyValue('--sidebar-left-w')
+
 
     const header = document.getElementsByTagName('header')[0];
     const class_main = document.getElementsByClassName('main')[0];

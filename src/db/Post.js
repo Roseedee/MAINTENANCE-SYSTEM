@@ -17,6 +17,20 @@ class Post extends Database {
             })
         })
     }
+
+    Brand(data) {
+        const sql = "INSERT INTO machine_brand (brand) VALUES (?)"
+        return new Promise((resolve, reject) => {
+            this.connection.query(sql, [
+                data.brand
+            ], (error, results) => {
+                if(error) {
+                    return reject(error)
+                }
+                resolve({ id: results.insertId })
+            })
+        })
+    }
 }
 
 module.exports = Post

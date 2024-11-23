@@ -8,26 +8,38 @@ route.post('/status', async (req, res) => {
     post.connect()
     const { status, note, color } = req.body;
 
-
-    console.log(req.body);
+    // console.log(req.body);
     // console.log('Note:', note);
     // console.log('Color:', color);
 
     try {
-        const result = await post.Status({
-            status, 
-            note, 
-            color
-        });
-
-        // res.status(201).json({ success: true, id: result.id, message: 'Status added successfully' });
+        const result = await post.Status({status, note, color});
     }catch (err) {
         console.error(err);
         res.status(500).send('Error fetching data');
     }
-    post.disconnect()
-    res.redirect('/manage/status-task-manage')
+    post.disconnect();
+    res.redirect('/manage/status-task-manage');
 
+})
+
+route.post('/brand', async (req, res) => {
+    const post = new Post();
+    post.connect();
+
+    const { brand } = req.body;
+
+    // console.log('Brand: ', brand)
+
+    try {
+        const result = await post.Brand({brand})
+    }catch (err) {
+        console.error(err)
+        res.status(500).send('Error fetching data');
+    }
+
+    post.disconnect();
+    res.redirect('/manage/brand-task-manage');
 })
 
 module.exports = route

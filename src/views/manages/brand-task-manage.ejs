@@ -42,7 +42,7 @@
                         <div class="modal-body">
                           <div class="my-input-container">
                             <label for="">ยี่ห้ออุปกรณ์</label>
-                            <input type="text" class="my-input my-input-sm" placeholder="ไทย - อังกฤษ - ตัวเลข" name="brand">
+                            <input type="text" class="my-input my-input-sm" placeholder="ไทย - อังกฤษ - ตัวเลข" name="brand" required>
                           </div>
                         </div>
                         <div class="modal-footer">
@@ -105,8 +105,10 @@
                         <span><%= brand.time %></span>
                       </td>
                       <td class="end fit text-end">
-                        <a href="" class="my-icon-button-sm my-button-light" data-bs-toggle="modal" data-bs-target="#brand001"><img src="/icons/edit.png" alt="">แก้ไข</a></td>
-                      <div class="modal fade" id="brand001" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        <a href="" class="my-icon-button-table-inline my-button-light" data-bs-toggle="modal" data-bs-target="#<%= brand.brand_id %>"><img src="/icons/edit.png" alt="">แก้ไข</a>
+                        <a href="" class="my-icon-button-table-inline my-button-bin"><img src="/icons/trash-bin-white.png" alt="">ลบ</a>
+                      </td>
+                      <div class="modal fade" id="<%= brand.brand_id %>" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content">
@@ -118,7 +120,7 @@
                               <div class="modal-body">
                                 <div class="my-input-container">
                                   <label for="">ยี่ห้ออุปกรณ์</label>
-                                  <input type="text" class="my-input my-input-sm" placeholder="ไทย - อังกฤษ - ตัวเลข" value="Lenovo">
+                                  <input type="text" class="my-input my-input-sm" placeholder="ไทย - อังกฤษ - ตัวเลข" value="<%= brand.brand %>">
                                 </div>
                               </div>
                               <div class="modal-footer">

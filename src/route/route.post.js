@@ -32,7 +32,7 @@ route.post('/brand', async (req, res) => {
     // console.log('Brand: ', brand)
 
     try {
-        const result = await post.Brand({brand})
+        const result = await post.Brand({brand});
     }catch (err) {
         console.error(err)
         res.status(500).send('Error fetching data');
@@ -40,6 +40,23 @@ route.post('/brand', async (req, res) => {
 
     post.disconnect();
     res.redirect('/manage/brand-task-manage');
+})
+
+route.post('/model', async (req, res) => {
+    const post = new Post();
+    post.connect();
+
+    const { model } = req.body;
+
+    try {
+        const result = post.Model({ model });
+    }catch (err) {
+        console.error(err);
+        res.status(500).send('Error fetching data');
+    }
+
+    post.disconnect();
+    res.redirect('/manage/model-task-manage');
 })
 
 module.exports = route

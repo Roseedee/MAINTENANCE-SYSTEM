@@ -32,7 +32,7 @@
               aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
-                  <form action="">
+                  <form action="/post/model" method="post">
                     <div class="modal-header">
                       <h4 class="modal-title" id="exampleModalLabel">จัดการรุ่นของอุปกรณ์</h4>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -40,12 +40,12 @@
                     <div class="modal-body">
                       <div class="my-input-container">
                         <label for="">รุ่นอุปกรณ์</label>
-                        <input type="text" class="my-input my-input-sm" placeholder="ไทย - อังกฤษ - ตัวเลข">
+                        <input type="text" class="my-input my-input-sm" placeholder="ไทย - อังกฤษ - ตัวเลข" name="model" required>
                       </div>
                     </div>
                     <div class="modal-footer">
                       <button class="my-icon-button-sm my-button-light" data-bs-dismiss="modal"><img
-                          src="/icons/close.png" alt=""> ยกเลิก</>
+                          src="/icons/close.png" alt=""> ยกเลิก</button>
                         <button type="submit" class="my-icon-button-sm my-button-save"><img src="/icons/save.png"
                             alt=""> บันทึกข้อมูล</button>
                     </div>
@@ -102,10 +102,11 @@
                     <span><%= model.date %></span><br>
                     <span><%= model.time %></span>
                   </td>
-                  <td class="end fit text-end">
-                    <a href="" class="my-icon-button-sm my-button-light" data-bs-toggle="modal" data-bs-target="#brand001"><img src="/icons/edit.png" alt="">แก้ไข</a>
+                  <td class="end fit text-center">
+                    <a href="" class="my-icon-button-table-inline my-button-light" data-bs-toggle="modal" data-bs-target="#<%= model.model_id %>"><img src="/icons/edit.png" alt="">แก้ไข</a>
+                    <a href="" class="my-icon-button-table-inline my-button-bin"><img src="/icons/trash-bin-white.png" alt="">ลบ</a>
                   </td>
-                  <div class="modal fade" id="brand001" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  <div class="modal fade" id="<%= model.model_id %>" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
@@ -117,11 +118,11 @@
                           <div class="modal-body">
                             <div class="my-input-container">
                               <label for="">รุ่นอุปกรณ์</label>
-                              <input type="text" class="my-input my-input-sm" placeholder="ไทย - อังกฤษ - ตัวเลข" value="Idaepad 3">
+                              <input type="text" class="my-input my-input-sm" placeholder="ไทย - อังกฤษ - ตัวเลข" value="<%= model.model %>">
                             </div>
                           </div>
                           <div class="modal-footer">
-                            <button class="my-icon-button-sm my-button-light" data-bs-dismiss="modal"><img src="/icons/close.png" alt=""> ยกเลิก</>
+                            <button class="my-icon-button-sm my-button-light" data-bs-dismiss="modal"><img src="/icons/close.png" alt=""> ยกเลิก</button>
                             <button type="submit" class="my-icon-button-sm my-button-save"><imgsrc="/icons/save.png" alt=""> บันทึกข้อมูล</button>
                           </div>
                         </form>

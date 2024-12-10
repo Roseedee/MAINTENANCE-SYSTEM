@@ -114,7 +114,7 @@
                   <td class="status-color"><div class="status-color" style="background-color: <%= status.status_color %>;"></div></td>
                   <td class="text-center fit">
                     <a href="" class="my-icon-button-table-inline my-button-edit"><img src="/icons/edit-white.png" alt="">แก้ไข</a>
-                    <a href="/delete/status/<%= status.status_id %>" class="my-icon-button-table-inline my-button-bin"><img src="/icons/trash-bin-white.png" alt="">ลบ</a>
+                    <a href="/delete/status/<%= status.status_id %>" onclick="return confirm('Are you sure you want to delete this data')" class="my-icon-button-table-inline my-button-bin"><img src="/icons/trash-bin-white.png" alt="">ลบ</a>
                   </td>
                 </tr>
                 <% }) %>

@@ -7,7 +7,7 @@ const Get = require('../db/Get')
 //model
 const Brand = require('../model/brand');
 const Model = require('../model/model');
-const Status = require('../model/status')
+const Status = require('../model/status.js')
 
 const view_path = path.join(__dirname, '../views');
 
@@ -97,8 +97,8 @@ route.get('/manage/status-task-manage', (req, res) => {
             console.error(err);
             res.status(500).send('Error fetching data');
         }else {
-            const status_default = rows.filter(data => data.status_type === 0).map(data => new Status(data['status_id'], data['status'], data['date_add'], data['status_note'], data['status_type'], data['status_color']))
-            const status_custom = rows.filter(data => data.status_type === 1).map(data => new Status(data['status_id'], data['status'], data['date_add'], data['status_note'], data['status_type'], data['status_color']))
+            const status_default = rows.filter(data => data.status_type === "default").map(data => new Status(data['status_id'], data['status'], data['date_add'], data['status_note'], data['status_type'], data['status_color']))
+            const status_custom = rows.filter(data => data.status_type !== "default").map(data => new Status(data['status_id'], data['status'], data['date_add'], data['status_note'], data['status_type'], data['status_color']))
             // console.log(typeof(rows[3]['status_type']))
             res.render(path.join(view_path, 'manages', 'status-task-manage'), {
                 page: 'manage',

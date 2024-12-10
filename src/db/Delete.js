@@ -30,6 +30,21 @@ class Delete extends Database {
             });
         });
     }
+
+    Model(id) {
+        const sql = "DELETE FROM machine_model WHERE model_id = ?";
+
+        return new Promise((resolve, reject) => {
+            this.connection.query(sql, id, (error, results) => {
+                if (error) {
+                    return reject(error)
+                }
+                resolve({
+                    id: id
+                });
+            });
+        });
+    }
 }
 
 module.exports = Delete

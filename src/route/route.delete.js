@@ -37,4 +37,21 @@ route.get('/brand/:id', async (req, res) => {
     res.redirect('/manage/brand-task-manage')
 })
 
+route.get('/model/:id', async (req, res) => {
+    const del = new Delete()
+    del.connect()
+
+    const id = req.params.id
+
+    try {
+        const result = del.Model(id)
+    }catch (err) {
+        console.error('Error deleting record:', err)
+        res.status(500).send('Error deleting data')
+    }
+
+    del.disconnect()
+    res.redirect('/manage/model-task-manage')
+})
+
 module.exports = route

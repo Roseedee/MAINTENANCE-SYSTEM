@@ -106,7 +106,7 @@
                       </td>
                       <td class="end fit text-end">
                         <a href="" class="my-icon-button-table-inline my-button-light" data-bs-toggle="modal" data-bs-target="#<%= brand.brand_id %>"><img src="/icons/edit.png" alt="">แก้ไข</a>
-                        <a href="" class="my-icon-button-table-inline my-button-bin"><img src="/icons/trash-bin-white.png" alt="">ลบ</a>
+                        <a href="/delete/brand/<%= brand.brand_id %>" class="my-icon-button-table-inline my-button-bin"><img src="/icons/trash-bin-white.png" alt="">ลบ</a>
                       </td>
                       <div class="modal fade" id="<%= brand.brand_id %>" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">

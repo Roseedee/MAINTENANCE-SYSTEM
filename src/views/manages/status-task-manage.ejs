@@ -113,10 +113,45 @@
                   <td><%= status.status_note %></td>
                   <td class="status-color"><div class="status-color" style="background-color: <%= status.status_color %>;"></div></td>
                   <td class="text-center fit">
-                    <a href="" class="my-icon-button-table-inline my-button-edit"><img src="/icons/edit-white.png" alt="">แก้ไข</a>
+                    <a href="" class="my-icon-button-table-inline my-button-edit"  data-bs-toggle="modal"
+                      data-bs-target="#form-data-<%= status.status_id %>"><img src="/icons/edit-white.png" alt="">แก้ไข</a>
                     <a href="/delete/status/<%= status.status_id %>" onclick="return confirm('Are you sure you want to delete this data')" class="my-icon-button-table-inline my-button-bin"><img src="/icons/trash-bin-white.png" alt="">ลบ</a>
                   </td>
                 </tr>
+                <div class="modal fade" id="form-data-<%= status.status_id %>" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <form action="/update/status/<%= status.status_id %>" method="post">
+                        <div class="modal-header">
+                          <h4 class="modal-title" id="exampleModalLabel">จัดการสถานะงานซ่อม</h4>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="my-input-container">
+                            <label for="">สถานะที่จะสร้าง*</label>
+                            <input type="text" class="my-input" placeholder="ไทย - อังกฤษ - ตัวเลข" name="status" value="<%= status.status %>" required>
+                          </div>
+                          <div class="my-input-container pt-2">
+                            <label for="">รายละเอียดของสถานะ</label>
+                            <textarea class="my-input" placeholder="ไทย - อังกฤษ - ตัวเลข" rows="4" name="note"><%= status.status_note %></textarea>
+                          </div>
+                          <div class="my-input-containe pt-2">
+                            <label for="">สีของสถานะ*</label>
+                            <div class="my-input-button-container">
+                              <input type="text" id="color" class="my-input my-input-sm" placeholder="#000000" value="<%= status.status_color %>" readonly>
+                              <input type="color" class="my-button" name="color" onchange="document.getElementById('color').value = this.value;" value="<%= status.status_color %>">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="my-icon-button-sm my-button-light" data-bs-dismiss="modal"><img src="/icons/close.png" alt=""> ยกเลิก</>
+                          <button type="submit" class="my-icon-button-sm my-button-save"><img src="/icons/save.png" alt=""> บันทึกข้อมูล</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
                 <% }) %>
               </tbody>
             </table>

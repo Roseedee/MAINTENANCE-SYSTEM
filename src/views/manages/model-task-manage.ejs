@@ -103,14 +103,14 @@
                     <span><%= model.time %></span>
                   </td>
                   <td class="end fit text-center">
-                    <a href="" class="my-icon-button-table-inline my-button-light" data-bs-toggle="modal" data-bs-target="#<%= model.model_id %>"><img src="/icons/edit.png" alt="">แก้ไข</a>
+                    <a href="" class="my-icon-button-table-inline my-button-light" data-bs-toggle="modal" data-bs-target="#form-data-<%= model.model_id %>"><img src="/icons/edit.png" alt="">แก้ไข</a>
                     <a href="/delete/model/<%= model.model_id %>" onclick="return confirm('Are you sure you want to delete this data')" class="my-icon-button-table-inline my-button-bin"><img src="/icons/trash-bin-white.png" alt="">ลบ</a>
                   </td>
-                  <div class="modal fade" id="<%= model.model_id %>" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  <div class="modal fade" id="form-data-<%= model.model_id %>" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
-                        <form action="">
+                        <form action="/update/model/<%= model.model_id %>" method="post">
                           <div class="modal-header">
                             <h4 class="modal-title" id="exampleModalLabel">จัดการรุ่นอุปกรณ์</h4>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -118,7 +118,7 @@
                           <div class="modal-body">
                             <div class="my-input-container">
                               <label for="">รุ่นอุปกรณ์</label>
-                              <input type="text" class="my-input my-input-sm" placeholder="ไทย - อังกฤษ - ตัวเลข" value="<%= model.model %>">
+                              <input type="text" class="my-input my-input-sm" placeholder="ไทย - อังกฤษ - ตัวเลข" name="model" value="<%= model.model %>">
                             </div>
                           </div>
                           <div class="modal-footer">

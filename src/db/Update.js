@@ -18,6 +18,22 @@ class Update extends Database {
             })
         })
     }
+
+    Model(id, data) {
+        const sql = "Update machine_model SET model=? WHERE model_id=?"
+        return new Promise((resolve, reject) => {
+            this.connection.query(sql, [
+                data.model,
+                id
+            ], (error, results) => {
+                if(error) {
+                    return reject(error)
+                }
+
+                resolve({ affectedRows: results.affectedRows })
+            })
+        })
+    }
 }
 
 module.exports = Update

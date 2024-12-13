@@ -3,6 +3,26 @@ const route = express.Router();
 
 const Update = require('../db/Update');
 
+route.post('/model/:id', async (req, res) => {
+    const update = new Update()
+    update.connect()
+
+    const id = req.params.id
+    const { model } = req.body
+
+    console.log(id, {model})
+
+    try {
+        let result = await update.Model(id, {model})
+    }catch (err) {
+        console.error('Error Update record:', err);
+        res.status(500).send('Error Update data');
+    }
+
+    update.disconnect()
+    res.redirect('/manage/model-task-manage');
+})
+
 route.post('/status/:id', async (req, res) => {
     const update = new Update()
     update.connect()

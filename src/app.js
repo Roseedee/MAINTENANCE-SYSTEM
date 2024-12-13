@@ -12,10 +12,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const route = require('./route/route.js');
 const route_post = require('./route/route.post.js')
 const route_delete = require('./route/route.delete.js')
+const route_update = require('./route/route.update.js')
 //route view
 app.use('/' , route)
 app.use('/post', route_post)
 app.use('/delete', route_delete)
+app.use('/update', route_update)
 
 //route static file
 app.use(express.static(path.join(__dirname, "../node_modules/bootstrap/dist/")));  

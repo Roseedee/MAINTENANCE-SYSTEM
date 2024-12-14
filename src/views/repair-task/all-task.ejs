@@ -25,9 +25,92 @@
                 <h5>แสดงข้อมูลงานซ่อมทั้งหมด</h5>
                 <hr>
               </div>
-              
+              <form class="fillter-content">
+                <div class="my-input-inline-container">
+                  <div>
+                    <label for="">แสดง</label>
+                    <select name="" id="" class="my-input-inline">
+                      <option value="1" selected>20</option>
+                      <option value="2">50</option>
+                      <option value="3">100</option>
+                    </select>
+                    <label for="" class="ms-1">รายการ</label>
+                  </div>
+                </div>
+                <div class="my-input-inline-container">
+                  <div>
+                    <label for="">ตัวกรอง : </label>
+                    <select name="" id="" class="my-input-inline">
+                      <option value="1" selected>อินวอยด์</option>
+                      <option value="2" selected>ชื่อลูกค้า</option>
+                      <option value="3" selected>เบอร์โทร</option>
+                      <option value="4" selected>ยี่ห้อ</option>
+                      <option value="5" selected>รุ่น</option>
+                      <option value="6" selected>หมายเลขเครื่อง</option>
+                      <option value="7" selected>SN</option>
+                      <option value="8" selected>อาการที่แจ้ง</option>
+                      <option value="9" selected>อาการที่ซ่อม</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="">ค้นหา : </label>
+                    <input type="text" class="my-input-inline">
+                  </div>
+                </div>
+              </form>
+              <div class="table-container">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th class="text-center fit">อินวอยด์ : สถานะ</th>
+                      <th class="text-center">ผู้ปรับล่าสุด</th>
+                      <th class="fit-left-w">ชื่อ : เบอร์โทร</th>
+                      <th class="fit-left-w">ยี่ห้อ : รุ่น</th>
+                      <th class="fit-left-w">อิมี่ : sn</th>
+                      <th class="fit-left-w">ราคา : ทุน</th>
+                      <th class="fit-left-w">ผู้รับงาน</th>
+                      <th class="fit-left-w">รายงาน</th>
+                      <th class="end fit-end text-end">จัดการ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="start text-center fit" style="background-color: green;">ets</td>
+                      <td class="text-center fit">
+                        <span>Roseedee Cehlaeh</span><br>
+                        <span>12-12-67</span>
+                      </td>
+                      <td class="fit-left-w">
+                        <span>Customer Name</span><br>
+                        <span>0653286598</span>
+                      </td>
+                      <td class="fit-left-w">
+                        <span>Asus</span><br>
+                        <span>Tuf Gaming 3</span>
+                      </td>
+                      <td class="fit-left-w">
+                        <span>123456789</span><br>
+                        <span>123456789</span>
+                      </td>
+                      <td class="fit-left-w">
+                        <span>1200 บาท</span><br>
+                        <span>0</span>
+                      </td>
+                      <td class="fit-left-w">
+                        <span>Roseedee Cehlaeh</span><br>
+                        <span>12-12-67</span>
+                      </td>
+                      <td class="fit-left-w">
+                        เล่นแปปๆแล้วเครื่องดับ
+                      </td>
+                      <td class="end fit-end text-end">
+                        <a href="" class="my-icon-button-table-inline my-button-light" data-bs-toggle="modal" data-bs-target=""><img src="/icons/edit.png" alt="">แก้ไข</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            
           </div>
           <%- include('../components/footer.ejs') %>
         </div>

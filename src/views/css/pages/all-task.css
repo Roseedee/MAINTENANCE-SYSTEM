@@ -1,4 +1,5 @@
 @import url(../components/table.css);
+@import url(../components/modal.css);
 
 .table.table tbody, .table.table thead {
     th, td {
@@ -43,3 +44,4 @@
         padding-right: 20px;
     }
 }
+

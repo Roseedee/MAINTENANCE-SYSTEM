@@ -42,14 +42,14 @@
                     <label for="">ตัวกรอง : </label>
                     <select name="" id="" class="my-input-inline">
                       <option value="1" selected>อินวอยด์</option>
-                      <option value="2" selected>ชื่อลูกค้า</option>
-                      <option value="3" selected>เบอร์โทร</option>
-                      <option value="4" selected>ยี่ห้อ</option>
-                      <option value="5" selected>รุ่น</option>
-                      <option value="6" selected>หมายเลขเครื่อง</option>
-                      <option value="7" selected>SN</option>
-                      <option value="8" selected>อาการที่แจ้ง</option>
-                      <option value="9" selected>อาการที่ซ่อม</option>
+                      <option value="2">ชื่อลูกค้า</option>
+                      <option value="3">เบอร์โทร</option>
+                      <option value="4">ยี่ห้อ</option>
+                      <option value="5">รุ่น</option>
+                      <option value="6">หมายเลขเครื่อง</option>
+                      <option value="7">SN</option>
+                      <option value="8">อาการที่แจ้ง</option>
+                      <option value="9">อาการที่ซ่อม</option>
                     </select>
                   </div>
                   <div>
@@ -75,7 +75,10 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="start text-center fit" style="background-color: green;">ets</td>
+                      <td class="start text-center fit" style="background-color: var(--color-received);">
+                        <span>กำลังดำเนินการ</span><br>
+                        <span>216547</span>
+                      </td>
                       <td class="text-center fit">
                         <span>Roseedee Cehlaeh</span><br>
                         <span>12-12-67</span>
@@ -94,7 +97,7 @@
                       </td>
                       <td class="fit-left-w">
                         <span>1200 บาท</span><br>
-                        <span>0</span>
+                        <span>0 บาท</span>
                       </td>
                       <td class="fit-left-w">
                         <span>Roseedee Cehlaeh</span><br>
@@ -104,8 +107,131 @@
                         เล่นแปปๆแล้วเครื่องดับ
                       </td>
                       <td class="end fit-end text-end">
-                        <a href="" class="my-icon-button-table-inline my-button-light" data-bs-toggle="modal" data-bs-target=""><img src="/icons/edit.png" alt="">แก้ไข</a>
+                        <a href="" class="my-icon-button-table-inline my-button-light" data-bs-toggle="modal" data-bs-target="#form"><img src="/icons/edit.png" alt="">จัดการ</a>
                       </td>
+                      <div class="modal fade" id="form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog my-modal-dialog-task">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">จัดการยี่ห้ออุปกรณ์</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="my-modal-content-task">
+                              <a href="" class="my-button-modal my-button-light" data-bs-toggle="modal" data-bs-target="">ดูรายละเอียด</a>
+                              <a href="" class="my-button-modal my-button-success" data-bs-toggle="modal" data-bs-target="">ปรับสถานะงาน</a>
+                              <a href="" class="my-button-modal my-button-edit" data-bs-toggle="modal" data-bs-target="">แก้ไขข้อมูล</a>
+                              <a href="" class="my-button-modal my-button-bin" data-bs-toggle="modal" data-bs-target="">ลบงาน</a>
+                            </div>
+                            <div class="modal-footer"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </tr>
+                    <tr>
+                      <td class="start text-center fit" style="background-color: var(--color-cancel);">
+                        <span>ยกเลิก</span><br>
+                        <span>216547</span>
+                      </td>
+                      <td class="text-center fit">
+                        <span>Roseedee Cehlaeh</span><br>
+                        <span>12-12-67</span>
+                      </td>
+                      <td class="fit-left-w">
+                        <span>Customer Name</span><br>
+                        <span>0653286598</span>
+                      </td>
+                      <td class="fit-left-w">
+                        <span>Asus</span><br>
+                        <span>Tuf Gaming 3</span>
+                      </td>
+                      <td class="fit-left-w">
+                        <span>123456789</span><br>
+                        <span>123456789</span>
+                      </td>
+                      <td class="fit-left-w">
+                        <span>1200 บาท</span><br>
+                        <span>0 บาท</span>
+                      </td>
+                      <td class="fit-left-w">
+                        <span>Roseedee Cehlaeh</span><br>
+                        <span>12-12-67</span>
+                      </td>
+                      <td class="fit-left-w">
+                        เล่นแปปๆแล้วเครื่องดับ
+                      </td>
+                      <td class="end fit-end text-end">
+                        <a href="" class="my-icon-button-table-inline my-button-light" data-bs-toggle="modal" data-bs-target="#form"><img src="/icons/edit.png" alt="">จัดการ</a>
+                      </td>
+                      <div class="modal fade" id="form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog my-modal-dialog-task">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">จัดการยี่ห้ออุปกรณ์</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="my-modal-content-task">
+                              <a href="" class="my-button-modal my-button-light" data-bs-toggle="modal" data-bs-target="">ดูรายละเอียด</a>
+                              <a href="" class="my-button-modal my-button-success" data-bs-toggle="modal" data-bs-target="">ปรับสถานะงาน</a>
+                              <a href="" class="my-button-modal my-button-edit" data-bs-toggle="modal" data-bs-target="">แก้ไขข้อมูล</a>
+                              <a href="" class="my-button-modal my-button-bin" data-bs-toggle="modal" data-bs-target="">ลบงาน</a>
+                            </div>
+                            <div class="modal-footer"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </tr>
+                    <tr>
+                      <td class="start text-center fit" style="background-color: var(--color-inprogress);">
+                        <span>กำลังดำเนินการ</span><br>
+                        <span>216547</span>
+                      </td>
+                      <td class="text-center fit">
+                        <span>Roseedee Cehlaeh</span><br>
+                        <span>12-12-67</span>
+                      </td>
+                      <td class="fit-left-w">
+                        <span>Customer Name</span><br>
+                        <span>0653286598</span>
+                      </td>
+                      <td class="fit-left-w">
+                        <span>Asus</span><br>
+                        <span>Tuf Gaming 3</span>
+                      </td>
+                      <td class="fit-left-w">
+                        <span>123456789</span><br>
+                        <span>123456789</span>
+                      </td>
+                      <td class="fit-left-w">
+                        <span>1200 บาท</span><br>
+                        <span>0 บาท</span>
+                      </td>
+                      <td class="fit-left-w">
+                        <span>Roseedee Cehlaeh</span><br>
+                        <span>12-12-67</span>
+                      </td>
+                      <td class="fit-left-w">
+                        เล่นแปปๆแล้วเครื่องดับ
+                      </td>
+                      <td class="end fit-end text-end">
+                        <a href="" class="my-icon-button-table-inline my-button-light" data-bs-toggle="modal" data-bs-target="#form"><img src="/icons/edit.png" alt="">จัดการ</a>
+                      </td>
+                      <div class="modal fade" id="form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog my-modal-dialog-task">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">จัดการยี่ห้ออุปกรณ์</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="my-modal-content-task">
+                              <a href="" class="my-button-modal my-button-light" data-bs-toggle="modal" data-bs-target="">ดูรายละเอียด</a>
+                              <a href="" class="my-button-modal my-button-success" data-bs-toggle="modal" data-bs-target="">ปรับสถานะงาน</a>
+                              <a href="" class="my-button-modal my-button-edit" data-bs-toggle="modal" data-bs-target="">แก้ไขข้อมูล</a>
+                              <a href="" class="my-button-modal my-button-bin" data-bs-toggle="modal" data-bs-target="">ลบงาน</a>
+                            </div>
+                            <div class="modal-footer"></div>
+                          </div>
+                        </div>
+                      </div>
                     </tr>
                   </tbody>
                 </table>

@@ -1,0 +1,16 @@
+.my-modal-dialog-task {
+    width: 400px;
+}
+
+.my-modal-content-task {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .my-icon-button-modal {
+        display: block;
+        
+    }
+}

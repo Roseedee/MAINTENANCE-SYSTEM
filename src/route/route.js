@@ -111,10 +111,10 @@ route.get('/manage/status-task-manage', (req, res) => {
     get.disconnect()
 })
 
-route.get('/repair-task/all', (req, res) => {
-    res.render(path.join(view_path, 'repair-task', 'all-task'), {
-        page: 'repair-task',
-        sub_menu: 'all-task'
+route.get('/task/all', (req, res) => {
+    res.render(path.join(view_path, 'task', 'task'), {
+        page: 'task',
+        sub_menu: 'task'
     })
 })
 

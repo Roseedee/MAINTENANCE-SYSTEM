@@ -32,7 +32,7 @@
               <h5>เพิ่มงานซ่อมที่ต้องค้างคืน</h5>
               <hr>
             </div>
-            <form action="" class="my-form">
+            <form action="/post/add-task" method="post" class="my-form" id="add-task-form">
               <span class="details"><span style="color: red; font-weight: bold;">หมายเหตุ!</span> ทิ้งค้างคืนหมายถึงงานซ่อมที่ต้องใช้ระยะเวลาในการซ่อม หรือต้องรออะไหล่ เหตุการณ์นี้จะถูกปรับสถานะเป็น กำลังซ่อม และเราต้องปรับ ซ่อมเสร็จ และมารับเครื่องอีกทีในเหตุการณ์ต่อไป</span>
               <hr>
               <div class="my-input-group-container">
@@ -172,7 +172,7 @@
               </div>
               <hr>
               <div class="my-input-group-container p-0">
-                <a href="" class="btn btn-sm btn-primary">เพิ่มงานซ่อมเข้าระบบ</a>
+                <a href="#" onclick="document.getElementById('add-task-form').submit();" class="btn btn-sm btn-primary">เพิ่มงานซ่อมเข้าระบบ</a>
                 <a href="" class="btn btn-sm btn-danger">ล้างข้อมูลที่กรอก</a>
               </div>
             </form>

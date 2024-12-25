@@ -59,4 +59,13 @@ route.post('/model', async (req, res) => {
     res.redirect('/manage/model-task-manage');
 })
 
+route.post('/add-task', async (req, res) => {
+    const post = new Post();
+    post.connect();
+
+
+    post.disconnect();
+    res.redirect('/task/all')
+})
+
 module.exports = route

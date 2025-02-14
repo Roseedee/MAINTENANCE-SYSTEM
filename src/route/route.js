@@ -58,7 +58,6 @@ route.get('/manage/brand-task-manage', (req, res) => {
             res.status(500).send('Error fetching data');
         } else {
             const brands = rows.map(data => new Brand(data['brand_id'], data['brand'], data['add_date']))
-            // console.log(brands)
             res.render(path.join(view_path, 'manages', 'brand-task-manage'), {
                 page: 'manage',
                 sub_menu: 'brand-task-manage',

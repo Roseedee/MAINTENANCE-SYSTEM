@@ -13,6 +13,7 @@ const route = require('./route/route.js');
 const route_post = require('./route/route.post.js')
 const route_delete = require('./route/route.delete.js')
 const route_update = require('./route/route.update.js')
+
 //route view
 app.use('/' , route)
 app.use('/post', route_post)

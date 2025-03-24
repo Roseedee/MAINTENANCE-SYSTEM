@@ -3,11 +3,11 @@
 
 .table.table tbody, .table.table thead {
     th, td {
-        font-size: 14px;
+        font-size: var(--table-font-size);
     }
     
     span {
-        font-size: 14px;
+        font-size: var(--table-font-size);
     }
 
     th.fit, td.fit {
